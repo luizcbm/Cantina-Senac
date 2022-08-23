@@ -89,7 +89,7 @@ if ($_SERVER['REQUEST_METHOD'] == "POST" && isset($_POST['submit'])) {
 }
 
 ?>
-    <link rel="stylesheet" href="../css/cadastro.css">
+    <link rel="stylesheet" href="site/css/cadastro.css">
 
     <form method="POST" enctype="multipart/form-data">
         <div class="nav">
