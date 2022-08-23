@@ -18,7 +18,15 @@ session_start();
 
   <nav class="bg hover-circulo">
     <div class="lu">
-      <h1>Olá <?php echo $_SESSION['nome'] ?>!!</h1>
+      <h1>Olá <?php 
+      
+      if(isset($_SESSION['nome'])){
+        echo  $_SESSION['nome'];
+      } else {
+        echo "Visitante";
+      }
+      
+      ?>!!</h1>
     </div>
     <div class="image">
       <img src="../images/logosenac.png">

@@ -35,6 +35,7 @@
         echo "</table>";
     }
 ?>
+<link rel="stylesheet" href="../css/lista.css">
 <br>
 <input type="button" value="Cadastrar" onclick="parent.location='cadUsuario.php'">
 
