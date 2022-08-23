@@ -1,7 +1,16 @@
 <nav class="bg hover-circulo">
-  <h1>Olá <?php echo $_SESSION['nome'] ?>!!</h1>
+  <h1>Olá <?php
+
+          if (isset($_SESSION['nome'])) {
+            echo $_SESSION['nome'];
+          } else {
+            echo  "Visitante";
+          }
+
+
+          ?>!!</h1>
   <div class="image">
-    <img src="assets/images/Design sem nome.png">
+    <img src="site/images/logosenac.png">
   </div>
 
   <style>
@@ -55,7 +64,7 @@
       background-color: red;
     }
   </style>
-  <div><a href="inicio.php" title="Inicio">Inicio</a>
+  <div><a href="index.php" title="Inicio">Inicio</a>
     <a href="contato.php" title="Contato">Contato</a>
     <a href="login.php" title="Login">Login</a>
     <a href="sobre.php" title="Sobre">Sobre</a>

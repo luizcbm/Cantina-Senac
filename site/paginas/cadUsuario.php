@@ -1,5 +1,5 @@
 <?php
-include "../include/MySql.php";
+include "site/include/MySql.php";
 
 $nome = "";
 $email = "";
@@ -89,17 +89,8 @@ if ($_SERVER['REQUEST_METHOD'] == "POST" && isset($_POST['submit'])) {
 }
 
 ?>
-
-<!DOCTYPE html>
-<html>
-
-<head>
-    <meta charset="UTF-8">
-    <title>Cadastro de Usuário</title>
     <link rel="stylesheet" href="../css/cadastro.css">
-</head>
 
-<body>
     <form method="POST" enctype="multipart/form-data">
         <div class="nav">
             <div class="h1">
@@ -137,6 +128,3 @@ if ($_SERVER['REQUEST_METHOD'] == "POST" && isset($_POST['submit'])) {
 
     </form>
     <span><?php echo $msgErro ?></span>
-</body>
-
-</html>

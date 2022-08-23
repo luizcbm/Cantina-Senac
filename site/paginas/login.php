@@ -1,8 +1,7 @@
 <?php
-include "../include/MySql.php";
-include "../include/functions.php";
+include "site/include/MySql.php";
+include "site/include/functions.php";
 
-session_start();
 $_SESSION['nome'] = "";
 $_SESSION['administrador'] = "";
 
@@ -48,38 +47,27 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
 ?>
 <div class="bolo">
-    <!DOCTYPE html>
-    <html>
 
-    <head>
-        <meta charset="UTF-8">
-        <title>Login</title>
-        <link rel="stylesheet" href="../css/login.css">
-    </head>
 
-    <body>
-        <form method="POST" action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']); ?>">
-            <div class="h1">
-                <legend>Login</legend>
-                <br>
-                <br>
-            </div>
-            <label for="email"></label>
-            <input type="text" placeholder="Email" name="email" value="<?php echo $email ?>">
+    <form method="POST" action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']); ?>">
+        <div class="h1">
+            <legend>Login</legend>
             <br>
-            <label for="senha"></label>
-            <input type="password" placeholder="Senha" name="senha" value="<?php echo $senha ?>">
             <br>
-            <div class="bola">
-                <br>
-                <input type="submit" value="Login" name="login">
-            </div>
-            <div class="enzo">
-                <h3><a href="cadUsuario.php">Cadastrar</a></h3>
-            </div>
-        </form>
-        <span><?php echo $msgErro ?></span>
-    </body>
+        </div>
+        <label for="email"></label>
+        <input type="text" placeholder="Email" name="email" value="<?php echo $email ?>">
+        <br>
+        <label for="senha"></label>
+        <input type="password" placeholder="Senha" name="senha" value="<?php echo $senha ?>">
+        <br>
+        <div class="bola">
+            <br>
+            <input type="submit" value="Login" name="login">
+        </div>
+        <div class="enzo">
+            <h3><a href="cadUsuario.php">Cadastrar</a></h3>
+        </div>
+    </form>
+    <span><?php echo $msgErro ?></span>
 </div>
-
-</html>

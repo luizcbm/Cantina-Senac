@@ -4,7 +4,7 @@ include "head.php";
 
 <?php
 
-include "site/paginas/login.php"
+include "site/paginas/logout.php"
 
 ?>
 

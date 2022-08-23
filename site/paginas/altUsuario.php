@@ -1,5 +1,5 @@
 <?php
-include "../include/MySql.php";
+include "site/include/MySql.php";
 
 $codigo = "";
 $nome = "";
@@ -100,16 +100,7 @@ if ($_SERVER['REQUEST_METHOD'] == "POST" && isset($_POST['submit'])) {
 
 ?>
 
-<!DOCTYPE html>
-<html>
 
-<head>
-    <meta charset="UTF-8">
-    <title>Alterar Usuário</title>
-    <link rel="stylesheet" href="../css/estilo.css">
-</head>
-
-<body>
     <form method="POST">
         <fieldset>
             <legend>Alterar Usuário</legend>
@@ -134,6 +125,3 @@ if ($_SERVER['REQUEST_METHOD'] == "POST" && isset($_POST['submit'])) {
         </fieldset>
     </form>
     <span><?php echo $msgErro ?></span>
-</body>
-
-</html>

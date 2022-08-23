@@ -2,16 +2,14 @@
 include "head.php";
 ?>
 
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Sobre nós</title>
- 
-</head>
-<body>
-<div>
-<img src="./assets/images/novidades.png">
+
+<div class="container">
+    <div class="w-75 bg-gray mx-auto">
+        <h1>Oi somos a melhor cantina</h1>
+    </div>
 </div>
 
-</body>
-</html>
+
+<?php
+include "footer.php";
+?>
