@@ -1,1 +1,5 @@
 [0823/145755.094:ERROR:registration_protocol_win.cc(106)] CreateFile: O sistema não pode encontrar o arquivo especificado. (0x2)
+[0823/145806.864:ERROR:registration_protocol_win.cc(106)] CreateFile: O sistema não pode encontrar o arquivo especificado. (0x2)
+[0823/150829.273:ERROR:registration_protocol_win.cc(106)] CreateFile: O sistema não pode encontrar o arquivo especificado. (0x2)
+[0823/154303.053:ERROR:registration_protocol_win.cc(106)] CreateFile: O sistema não pode encontrar o arquivo especificado. (0x2)
+[0823/160928.751:ERROR:registration_protocol_win.cc(106)] CreateFile: O sistema não pode encontrar o arquivo especificado. (0x2)
