@@ -4,6 +4,7 @@ include "site/include/functions.php";
 
 $_SESSION['nome'] = "";
 $_SESSION['administrador'] = "";
+$_SESSION['codigo'] = "";
 
 $email = "";
 $emailErro = "";
@@ -32,6 +33,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                 foreach ($info as $key => $values) {
                     $_SESSION['nome'] = $values['nome'];
                     $_SESSION['administrador'] = "1";
+                    $_SESSION['codigo'] = $values['codigo'];
                 }
                 header('location:principal.php');
             } else {

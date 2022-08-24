@@ -1,3 +1,4 @@
+
 <nav class="bg hover-circulo">
   <h1>Olá <?php
 
@@ -12,7 +13,7 @@
   <div class="image">
     <img src="site/images/logosenac.png">
   </div>
-
+  
   <style>
     /* Style The Dropdown Button */
     .dropbtn {
@@ -66,7 +67,7 @@
   </style>
   <div><a href="index.php" title="Inicio">Inicio</a>
     <a href="contato.php" title="Contato">Contato</a>
-    <a href="login.php" title="Login">Login</a>
+    
     <a href="sobre.php" title="Sobre">Sobre</a>
     <div class="dropdown">
       <button class="dropbtn">Cardapio</button>
@@ -76,6 +77,9 @@
         <a href="#">Link 2</a>
         <a href="#">Link 3</a>
       </div>
+    </div>
+     <div class="logi">
+    <a href="logout.php" title="Logout">Logout</a>
     </div>
   </div>
 </nav>

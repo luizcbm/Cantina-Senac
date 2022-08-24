@@ -1,5 +1,5 @@
 body {
-    background: url(https://images2.alphacoders.com/437/437997.jpg) center center no-repeat fixed;
+    background: url('2wCEAAoHCBUVFRUWFRUYFRgaHR0cGRwcHBoZGRgZGBwcGRkcGBgdJC4lHB4rHxwaKzgmKzA0NTU1GiQ7QDs0Py40NTEBDAwMEA8QHxISHz8sJSU0NDQ9NDY0NDQ2NDQ0NDQ0NDQ0NDQ6NDQ0NDY0NDQ0NDQ0NDU0NjQ0NDQ0NDY0NDQ0NP.jpg') center center no-repeat fixed;
 }
 
 .image {
@@ -27,6 +27,11 @@ body {
 
 .Login {
     color: aliceblue;
+}
+
+.logi {
+    padding-right: 10px;
+    display: flex;
 }
 
 nav.bg {
