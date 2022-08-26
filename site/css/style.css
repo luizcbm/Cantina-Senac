@@ -1,16 +1,17 @@
-body {
-    background: url('2wCEAAoHCBUVFRUWFRUYFRgaHR0cGRwcHBoZGRgZGBwcGRkcGBgdJC4lHB4rHxwaKzgmKzA0NTU1GiQ7QDs0Py40NTEBDAwMEA8QHxISHz8sJSU0NDQ9NDY0NDQ2NDQ0NDQ0NDQ0NDQ6NDQ0NDY0NDQ0NDQ0NDU0NjQ0NDQ0NDY0NDQ0NP.jpg') center center no-repeat fixed;
+nav {
+    background: url('https://cdn.create.vista.com/api/media/medium/306600088/stock-photo-top-view-natural-wooden-spoons?token=jpg')center center no-repeat fixed;
 }
 
 .image {
     text-align: left;
     display: flex;
+    size: 5px;
 }
 
 .banner {
     width: 100%;
     height: 400px;
-    background: url(../images/leand.jpg) no-repeat center;
+    background: url(../images/leand.jpg);
     background-size: cover;
     text-align: center;
 }
@@ -38,7 +39,7 @@ nav.bg {
     width: 100%;
     float: left;
     text-align: center;
-    background-color: red;
+    background: url(../images/sei.png);
     padding: 0.1em 0em;
     display: flex;
     align-items: center;

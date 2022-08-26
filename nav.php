@@ -1,5 +1,6 @@
 
 <nav class="bg hover-circulo">
+<link rel="stylesheet" href="site/css/style.css">
   <h1>Olá <?php
 
           if (isset($_SESSION['nome'])) {
@@ -11,18 +12,18 @@
 
           ?>!!</h1>
   <div class="image">
-    <img src="site/images/logosenac.png">
+    <img src="site/images/pão.png">
   </div>
-  
+ 
   <style>
     /* Style The Dropdown Button */
     .dropbtn {
-      padding: 16px;
+      
       font-size: 140%;
       border: none;
       cursor: pointer;
       font-weight: bold;
-      background-color: red;
+     background: url(../images/print.png);
       color: white;
     }
 
@@ -36,9 +37,9 @@
     .dropdown-content {
       display: none;
       position: absolute;
-      background-color: #fa1414;
+      background-color: #00BFFF;
       min-width: 160px;
-      box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+      box-shadow: 0px 8px 16px 0px rgb(0, 0, 0, 0.2);
       z-index: 1;
     }
 
@@ -52,7 +53,7 @@
 
     /* Change color of dropdown links on hover */
     .dropdown-content a:hover {
-      background-color: red
+      background-color: #00BFFF;
     }
 
     /* Show the dropdown menu on hover */
@@ -62,7 +63,7 @@
 
     /* Change the background color of the dropdown button when the dropdown content is shown */
     .dropdown:hover .dropbtn {
-      background-color: red;
+      background-color: #00BFFF;
     }
   </style>
   <div><a href="index.php" title="Inicio">Inicio</a>

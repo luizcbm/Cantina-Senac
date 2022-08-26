@@ -120,7 +120,7 @@ if ($_SERVER['REQUEST_METHOD'] == "POST" && isset($_POST['submit'])) {
             </div>
             <br>
             <br>
-            <div class="button">
+            <div class="bot">
                 <a href="login.php"><button type="submit" name="submit">Salvar</button></a>
 
             </div>
