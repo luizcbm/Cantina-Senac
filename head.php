@@ -10,7 +10,7 @@ session_start();
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="site/css/principal.css">
-    
+    <link rel="stylesheet" href="site/css/style.css">
     <link rel="stylesheet" href="site/css/lista.css">
     <link rel="stylesheet" href="site/css/cadastro.css">
     <link rel="stylesheet" href="site/css/login.css">

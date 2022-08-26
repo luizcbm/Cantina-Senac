@@ -1,6 +1,6 @@
 
 <nav class="bg hover-circulo">
-<link rel="stylesheet" href="site/css/style.css">
+
   <h1>Olá <?php
 
           if (isset($_SESSION['nome'])) {
