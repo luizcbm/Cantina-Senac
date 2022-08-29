@@ -1,5 +1,8 @@
-
 <nav class="bg hover-circulo">
+
+  <div class="image">
+    <img src="site/images/logosenac.png">
+  </div>
 
   <h1>Olá <?php
 
@@ -11,19 +14,17 @@
 
 
           ?>!!</h1>
-  <div class="image">
-    <img src="site/images/pão.png">
-  </div>
- 
+
+
   <style>
     /* Style The Dropdown Button */
     .dropbtn {
-      
+
       font-size: 140%;
       border: none;
       cursor: pointer;
       font-weight: bold;
-     background: url(../images/print.png);
+      background: url(../images/print.png);
       color: white;
     }
 
@@ -66,9 +67,10 @@
       background-color: #00BFFF;
     }
   </style>
-  <div><a href="index.php" title="Inicio">Inicio</a>
+  <div class="bun">
+    <a href="index.php" title="Inicio">Inicio</a>
     <a href="contato.php" title="Contato">Contato</a>
-    
+
     <a href="sobre.php" title="Sobre">Sobre</a>
     <div class="dropdown">
       <button class="dropbtn">Cardapio</button>
@@ -79,8 +81,8 @@
         <a href="#">Link 3</a>
       </div>
     </div>
-     <div class="logi">
-    <a href="logout.php" title="Logout">Logout</a>
+    <div class="logi">
+      <a href="logout.php" title="Logout">Logout</a>
     </div>
   </div>
 </nav>

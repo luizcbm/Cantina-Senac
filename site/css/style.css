@@ -1,11 +1,7 @@
-body {
-    background: url('https://cdn.create.vista.com/api/media/medium/306600088/stock-photo-top-view-natural-wooden-spoons?token=jpg')center center no-repeat fixed;
-}
-
 .image {
-    text-align: left;
     display: flex;
     size: 5px;
+    margin-right: 30%;
 }
 
 .banner {
@@ -39,7 +35,7 @@ nav.bg {
     width: 100%;
     float: left;
     text-align: center;
-    background: url(../images/sei.png);
+    background-color: red;
     padding: 0.1em 0em;
     display: flex;
     align-items: center;

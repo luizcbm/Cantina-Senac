@@ -19,8 +19,19 @@ session_start();
     <title>Cantina Senac</title>
 
 </head>
+<?php 
+$pagina = "fundologin"
+// fazer uma fução php -> Verificar qual a pagina vc esta.
+// if(login){
+//  $pagina = "fundoLogin"
+// } else if (cadastro){
+//     $pagina = "fundocadastro"
+// }
 
-<body>
+?>
+<body id="<?php echo $pagina?>">
+
+
 
     <?php
     include "nav.php";
