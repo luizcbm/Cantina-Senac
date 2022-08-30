@@ -67,6 +67,7 @@
       background-color: #00BFFF;
     }
   </style>
+
   <div class="bun">
     <a href="index.php" title="Inicio">Inicio</a>
     <a href="contato.php" title="Contato">Contato</a>
@@ -82,6 +83,12 @@
       </div>
     </div>
     <div class="logi">
+    <?php
+    if (isset($_SESSION['login'])) {
+            echo "Logout";
+          } else {
+            echo  "Login";
+          }?>
       <a href="logout.php" title="Logout">Logout</a>
     </div>
   </div>
