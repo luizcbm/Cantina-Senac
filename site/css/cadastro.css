@@ -2,13 +2,9 @@
     color: red;
 }
 
-.nav {
+.container-form {
     color: black;
     background-image: linear-gradient(45deg, white, yellow, black);
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
     padding: 80px;
     border-radius: 15px;
 }

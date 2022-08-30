@@ -17,16 +17,22 @@
 
 
   <style>
-    /* Style The Dropdown Button */
-    .dropbtn {
+div button.dropbtn :focus,
+div button.dropbtn :hover {
+    transition: 1ms;
+    outline: none;
+    color: #ece750;
+}
 
-      font-size: 140%;
-      border: none;
-      cursor: pointer;
-      font-weight: bold;
-      background: url(../images/print.png);
-      color: white;
-    }
+    .dropbtn{
+
+font-size: 140%;
+border: none;
+cursor: pointer;
+font-weight: bold;
+background: url(../images/print.png);
+color: white;
+}
 
     /* The container <div> - needed to position the dropdown content */
     .dropdown {
@@ -38,7 +44,7 @@
     .dropdown-content {
       display: none;
       position: absolute;
-      background-color: #00BFFF;
+      background-color: red;
       min-width: 160px;
       box-shadow: 0px 8px 16px 0px rgb(0, 0, 0, 0.2);
       z-index: 1;
@@ -54,7 +60,7 @@
 
     /* Change color of dropdown links on hover */
     .dropdown-content a:hover {
-      background-color: #00BFFF;
+      background-color: red;
     }
 
     /* Show the dropdown menu on hover */
@@ -64,8 +70,8 @@
 
     /* Change the background color of the dropdown button when the dropdown content is shown */
     .dropdown:hover .dropbtn {
-      background-color: #00BFFF;
-    }
+      background-color: red;
+    } 
   </style>
 
   <div class="bun">
@@ -84,12 +90,13 @@
     </div>
     <div class="logi">
     <?php
-    if (isset($_SESSION['login'])) {
-            echo "Logout";
+    if (!isset($_SESSION['nome'])) {
+
+            echo '<a href="login.php" title="Logout">Login</a>';
           } else {
-            echo  "Login";
+            
+            echo '<a href="logout.php" title="Logout">Logout</a>';
           }?>
-      <a href="logout.php" title="Logout">Logout</a>
     </div>
   </div>
 </nav>
