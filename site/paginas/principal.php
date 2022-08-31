@@ -1,8 +1,8 @@
 
 <?php
-
-if ($_SESSION['nome'] != "") {
-  include "site/include/MySql.php";
+include "site/include/MySql.php";
+if ($_SESSION['nome'] = "") {
+  
 
   $sql = $pdo->prepare('SELECT * FROM usuario WHERE codigo = '.$_SESSION['codigo']);
   $sql->execute();

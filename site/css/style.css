@@ -1,5 +1,6 @@
 .image {
     display: flex;
+    margin-right: 400px;
 }
 
 .banner {
@@ -22,12 +23,15 @@
 
 .Login {
     color: aliceblue;
-    ;
 }
 
-.logi {
-    padding-right: 10px;
-    display: flex;
+.per {
+    background-color: dodgerblue;
+    border: none;
+    padding: 15px;
+    border-radius: 15px;
+    cursor: pointer;
+    margin-left: 400px;
 }
 
 nav.bg {

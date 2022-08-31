@@ -17,8 +17,8 @@
 
 
   <style>
-div button.dropbtn :focus,
-div button.dropbtn :hover {
+button.dropbtn:focus,
+button.dropbtn:hover {
     transition: 1ms;
     outline: none;
     color: #ece750;
@@ -74,7 +74,7 @@ color: white;
     } 
   </style>
 
-  <div class="bun">
+  <div class="tul">
     <a href="index.php" title="Inicio">Inicio</a>
     <a href="contato.php" title="Contato">Contato</a>
 
@@ -88,15 +88,22 @@ color: white;
         <a href="#">Link 3</a>
       </div>
     </div>
-    <div class="logi">
+
+    
+    
+    <button class="per">
     <?php
+    
     if (!isset($_SESSION['nome'])) {
 
-            echo '<a href="login.php" title="Logout">Login</a>';
+            echo '<a href="login.php" title="Logout">Logar</a>';
           } else {
             
-            echo '<a href="logout.php" title="Logout">Logout</a>';
-          }?>
+            echo '<a href="logout.php" title="Logout">Desconectar-se</a>';
+          }
+          
+          ?>
+          </button>
+          
     </div>
-  </div>
 </nav>
