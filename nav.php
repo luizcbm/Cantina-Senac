@@ -3,7 +3,26 @@
   <div class="image">
     <img src="site/images/logosenac.png">
   </div>
+  <?php
 
+if ($_SESSION['nome'] != "") {
+  include "site/include/MySql.php";
+
+  $sql = $pdo->prepare('SELECT * FROM usuario WHERE codigo = '.$_SESSION['codigo']);
+  $sql->execute();
+  $info = $sql->fetchAll(PDO::FETCH_ASSOC);
+  $path = "data:image/jpg:charset=utf8;base64," . base64_encode($info[0]['imagem']);
+?>
+  <img width="100px" style="border-radius: 90px;
+width: 5%;
+  height: 5%;
+  overflow: hidden;
+  width: 50px;
+  height: 50px;" src="<?php echo $path; ?>">
+  
+<?php } else { ?>
+  <h1>Você não está logado!!</h1>
+<?php } ?>
   <h1>Olá <?php
 
           if (isset($_SESSION['nome'])) {
