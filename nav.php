@@ -3,6 +3,13 @@
   <div class="image">
     <img src="site/images/logosenac.png">
   </div>
+  <h1>Olá <?php
+
+if (isset($_SESSION['nome'])) {
+  echo $_SESSION['nome'];
+} else {
+  echo  "Visitante";
+}?>
   <?php
 
 if ($_SESSION['nome'] != "") {
@@ -14,25 +21,27 @@ if ($_SESSION['nome'] != "") {
   $path = "data:image/jpg:charset=utf8;base64," . base64_encode($info[0]['imagem']);
 ?>
   <img width="100px" style="border-radius: 90px;
-width: 5%;
-  height: 5%;
+width: 7%;
+  height: 7%;
   overflow: hidden;
-  width: 50px;
-  height: 50px;" src="<?php echo $path; ?>">
+  width: 55px;
+  height: 55px;" src="<?php echo $path; ?>">
   
 <?php } else { ?>
-  <h1>Você não está logado!!</h1>
+ 
+  
+  <img width="100px" style="border-radius: 90px;
+width: 7%;
+  height: 7%;
+  overflow: hidden;
+  width: 55px;
+  height: 55px; " src="site/images/visitante.png">
 <?php } ?>
-  <h1>Olá <?php
-
-          if (isset($_SESSION['nome'])) {
-            echo $_SESSION['nome'];
-          } else {
-            echo  "Visitante";
-          }
 
 
-          ?>!!</h1>
+
+
+          !!</h1>
 
 
   <style>
