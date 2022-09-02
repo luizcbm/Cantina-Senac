@@ -7,7 +7,7 @@
     if (isset($_GET['id'])){
         $codigo = $_GET['id'];
 
-        $sql = $pdo->prepare("DELETE FROM USUARIO WHERE codigo = ?");
+        $sql = $pdo->prepare("DELETE FROM Produtos WHERE codigo = ?");
         if ($sql->execute(array($codigo))){
             if ($sql->rowCount() > 0){
                 $msgErro = "produto excluído com sucesso!";

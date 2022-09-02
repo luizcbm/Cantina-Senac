@@ -1,14 +1,13 @@
 <?php
 include "../include/MySql.php";
 
-$produto = "";
+
 $nome_produto = "";
 $descricao = "";
 $valor= "";
-$administrador = "";
 $imgContent = "";
 
-$produtoErro = "";
+
 $nome_produtoErro = "";
 $descricaoErro = "";
 $valorErro = "";
@@ -40,21 +39,15 @@ if ($_SERVER['REQUEST_METHOD'] == "POST" && isset($_POST['submit'])) {
             else
                 $valor = $_POST['valor'];
 
-            if (isset($_POST['administrador']))
-                $administrador = 1;
-            else
-                $administrador = 0;
-
             if ($nome_produto && $descricao && $valor) {
                 //Verificar se ja existe o email
-                        $sql = $pdo->prepare("INSERT INTO produtos(codigo, nome, descricao, valor, administrador, IMAGEM)
-                                                VALUES (null, ?, ?, ?, ?, ?)");
-                        if ($sql->execute(array($nome_produto, $descricao,$valor, $administrador, $imgContent))) {
+                        $sql = $pdo->prepare("INSERT INTO produtos(codigo, nome, descricao, valor, IMAGEM)
+                                                VALUES (null, ?, ?, ?, ?)");
+                        if ($sql->execute(array($nome_produto, $descricao,$valor, $imgContent))) {
                             $msgErro = "Dados cadastrados com sucesso!";
                             $nome_produto = "";
                             $descricao = "";
                             $valor = "";
-                            $administrador = "";
                             $imgContent = "";
                             header('location:listProdutos.php');
                         } else {
@@ -88,8 +81,6 @@ if ($_SERVER['REQUEST_METHOD'] == "POST" && isset($_POST['submit'])) {
             <br>
             <input type="text" placeholder="valor" name="valor" value="<?php echo $valor ?>">
             <span class="obrigatorio">*<?php echo $valorErro ?></span>
-            <br>
-            <input type="checkbox" name="administrador">Administrador
             <br>
 
             <div class="daora">

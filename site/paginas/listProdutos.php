@@ -1,7 +1,7 @@
 <?php
     include "../include/MySql.php";
 
-    $sql = $pdo->prepare('SELECT * FROM produtos');
+    $sql = $pdo->prepare('SELECT * FROM Produtos');
     if ($sql->execute()){
         $info = $sql->fetchAll(PDO::FETCH_ASSOC);
 
@@ -11,8 +11,10 @@
         echo "  <th>nome</th>";    
         echo "  <th>descricao</th>";
         echo "  <th>valor</th>";
-        echo "  <th>Administrador</th>";
         echo "  <th>Imagem</th>";
+        echo "  <th>Alterar</th>";
+        echo "  <th>Excluir</th>";
+
         echo "</tr>";
         foreach($info as $key => $value){
             echo "<tr>";
@@ -20,12 +22,11 @@
             echo "<td>".$value['nome']."</td>";
             echo "<td>".$value['descricao']."</td>";
             echo "<td>".$value['valor']."</td>";
-            echo "<td>".$value['administrador']."</td>";
             $imagem = $value['imagem'];
 
             echo '<td><img style="width:80px;" src="data:image/jpg:charset=utf8;base64,'.base64_encode($imagem).'"></td>';
-            echo "<td><center><a href='altUsuario.php?id=".$value['codigo']."'>(+)</a></center></td>";
-            echo "<td><center><a href='delUsuario.php?id=".$value['codigo']."'>(-)</a></center></td>";
+            echo "<td><center><a href='altProdutos.php?id=".$value['codigo']."'>(+)</a></center></td>";
+            echo "<td><center><a href='delProdutos.php?id=".$value['codigo']."'>(-)</a></center></td>";
             echo "</tr>";
         }
         echo "</table>";
