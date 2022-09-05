@@ -14,6 +14,7 @@ session_start();
     <link rel="stylesheet" href="site/css/lista.css">
     <link rel="stylesheet" href="site/css/cadastro.css">
     <link rel="stylesheet" href="site/css/login.css">
+    <link rel="stylesheet" href="site/css/sobre.css">
 
     <script src="assets/js/index.js"></script>
     <title>Cantina Senac</title>
