@@ -14,13 +14,13 @@ session_start();
     <link rel="stylesheet" href="site/css/lista.css">
     <link rel="stylesheet" href="site/css/cadastro.css">
     <link rel="stylesheet" href="site/css/login.css">
-    <link rel="stylesheet" href="site/css/sobre.css">
+    <link rel="stylesheet" href="site/css/footer.css">
 
     <script src="assets/js/index.js"></script>
     <title>Cantina Senac</title>
 
 </head>
-<?php 
+<?php
 $pagina = "fundologin"
 // fazer uma fução php -> Verificar qual a pagina vc esta.
 // if(login){
@@ -30,7 +30,8 @@ $pagina = "fundologin"
 // }
 
 ?>
-<body id="<?php echo $pagina?>">
+
+<body id="<?php echo $pagina ?>">
 
 
 

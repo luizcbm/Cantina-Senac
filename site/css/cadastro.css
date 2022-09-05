@@ -5,8 +5,9 @@
 .container-form {
     color: black;
     background-image: linear-gradient(45deg, white, yellow, black);
-    padding: 80px;
+    padding: 10px;
     border-radius: 15px;
+    width: 50%;
 }
 
 input {
@@ -25,7 +26,7 @@ input {
     background-color: dodgerblue;
     border: none;
     padding: 15px;
-    width: 100%;
+    width: 10%;
     border-radius: 15px;
     cursor: pointer;
 }
@@ -34,7 +35,7 @@ input {
     background-color: dodgerblue;
     border: none;
     padding: 15px;
-    width: 90%;
+    width: 50%;
     border-radius: 15px;
     cursor: pointer;
     color: black;
@@ -48,7 +49,7 @@ input[type="file"] {
     background-color: dodgerblue;
     border: none;
     padding: 15px;
-    width: 100%;
+    width: 50%;
     border-radius: 15px;
     cursor: pointer;
     left: 20px;

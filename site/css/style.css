@@ -11,10 +11,6 @@
     text-align: center;
 }
 
-.ing {
-    border-radius: 15px;
-}
-
 .carousel {
     display: flex;
     flex-direction: row;

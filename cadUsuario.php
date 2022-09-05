@@ -3,7 +3,7 @@ include "head.php";
 ?>
 
 
- <div class="container  mx-auto p-5 bg-white"> 
+ <div class="container  mx-auto p-5"> 
     <?php
     include "site/paginas/cadUsuario.php"
     ?>
