@@ -1,7 +1,11 @@
+<?php
+  include "site/include/MySql.php";
+?>
+
 <nav class="bg hover-circulo">
 
   <div class="image">
-    <img src="site/images/logosenac.png">
+    <img src="assets/images/logosenac.png">
   </div>
   <h1>Olá <?php
 
@@ -9,16 +13,15 @@ if (isset($_SESSION['nome'])) {
   echo $_SESSION['nome'];
 } else {
   echo  "Visitante";
-}?>
+}?> !!</h1>
   <?php
 
-if ($_SESSION['nome'] != "") {
-  include "site/include/MySql.php";
-
-  $sql = $pdo->prepare('SELECT * FROM usuario WHERE codigo = '.$_SESSION['codigo']);
-  $sql->execute();
-  $info = $sql->fetchAll(PDO::FETCH_ASSOC);
-  $path = "data:image/jpg:charset=utf8;base64," . base64_encode($info[0]['imagem']);
+if (isset($_SESSION['codigo'])) {
+  echo "Codigo: ".$_SESSION['codigo'];
+  //$sql = $pdo->prepare('SELECT * FROM usuario WHERE codigo = '.$_SESSION['codigo']);
+  //$sql->execute();
+  //$info = $sql->fetchAll(PDO::FETCH_ASSOC);
+  //$path = "data:image/jpg:charset=utf8;base64," . base64_encode($info[0]['imagem']);
 ?>
   <img width="100px" style="border-radius: 90px;
 width: 7%;
@@ -35,13 +38,13 @@ width: 7%;
   height: 7%;
   overflow: hidden;
   width: 55px;
-  height: 55px; " src="site/images/visitante.png">
+  height: 55px; " src="assets/images/visitante.png">
 <?php } ?>
 
 
 
 
-          !!</h1>
+          
 
 
   <style>
@@ -104,19 +107,20 @@ color: white;
 
   <div class="tul">
     <a href="index.php" title="Inicio">Inicio</a>
-    <a href="contato.php" title="Contato">Contato</a>
+    
 
     <a href="sobre.php" title="Sobre">Sobre</a>
     <div class="dropdown">
       <button class="dropbtn">Cardapio</button>
-
+      
+    
       <div class="dropdown-content">
         <a href="refri.html">Bebidas</a>
         <a href="#">Link 2</a>
         <a href="#">Link 3</a>
       </div>
-    </div>
-
+      </div>
+      <a href="contato.php" title="Contato"><img class="car" src="assets/images/carrinho.png"></a>
     
     
     <button class="per">

@@ -1,6 +1,6 @@
 <?php
-include "site/include/MySql.php";
-include "site/include/functions.php";
+include "../include/MySql.php";
+include "../include/functions.php";
 
 $_SESSION['nome'] = "";
 $_SESSION['administrador'] = "";
@@ -35,7 +35,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                     $_SESSION['administrador'] = "1";
                     $_SESSION['codigo'] = $values['codigo'];
                 }
-                header('location:principal.php');
+                header('location:../nav.php');
             } else {
                 $msgErro = "Usuário não cadastrado!";
             }

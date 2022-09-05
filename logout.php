@@ -1,13 +1,5 @@
 <?php
-include "head.php";
-?>
-
-<?php
-
-include "site/paginas/logout.php";
-
-?>
-
-<?php
-include "footer.php";
+session_start();
+session_destroy();
+header('location:login.php');
 ?>
