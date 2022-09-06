@@ -1,0 +1,43 @@
+body{
+    background:url('https://images2.alphacoders.com/437/437997.jpg');
+}
+* {
+    margin: 0;
+    padding: 0;
+    }
+    a {
+    color: #fff;
+    text-decoration: none;
+    transition: 0.3s;
+    }
+    a:hover {
+    opacity: 0.7;
+    } 
+    nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: sans-serif;
+  
+    background: #424242;
+    height: 6vh;
+    }
+    .nav-list {
+    list-style: none;
+    display: flex;
+    margin-left: 600px;
+    }
+    .nav-list li {
+    letter-spacing: 0px;
+    margin-left: 100px;
+    }
+    img{
+        margin-left:0;
+        height:55px ;
+        width: 55px;
+    }
+    li{
+        margin-right: 100px;
+    }
+    /*aqui vaiser a parte da página pricipal*/
+    
