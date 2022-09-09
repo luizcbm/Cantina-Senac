@@ -13,5 +13,5 @@ if ($_SESSION['nome'] != "") {
   <h3><a href="listUsuario.php">Lista de Usuários</a></h3>
   
 <?php } else { ?>
-  <h1>Você não está logado!!</h1>
+  <h1>Você não está logado!!</h1>     
 <?php } ?>
