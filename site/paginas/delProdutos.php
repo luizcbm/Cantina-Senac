@@ -1,5 +1,5 @@
 <?php
-    include "site/include/MySql.php";
+    include "../include/MySql.php";
 
     $msgErro = "";
     $codigo = "";
@@ -7,11 +7,11 @@
     if (isset($_GET['id'])){
         $codigo = $_GET['id'];
 
-        $sql = $pdo->prepare("DELETE FROM USUARIO WHERE codigo = ?");
+        $sql = $pdo->prepare("DELETE FROM Produtos WHERE codigo = ?");
         if ($sql->execute(array($codigo))){
             if ($sql->rowCount() > 0){
-                $msgErro = "Usuário excluído com sucesso!";
-                header('location:listUsuario.php');
+                $msgErro = "produto excluído com sucesso!";
+                header('location:listProdutos.php');
             } else {
                 $msgErro = "Código não localizado!";
             }
