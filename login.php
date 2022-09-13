@@ -37,7 +37,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                     $_SESSION['codigo'] = $values['codigo'];
                 }
                 //header('location:index.php');
-                
+                echo "<meta http-equiv='refresh' content='0;index.php'>";
             } else {
                 $msgErro = "Usuário não cadastrado!";
             }

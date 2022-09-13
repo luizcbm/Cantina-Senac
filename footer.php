@@ -9,7 +9,7 @@ include_once "head.php";
 
 
 <div class="junto">
-<img class="rodape-imagem" src="assets/images/novalogo.png" alt="">
+<img class="rodape-imagem" src="assets/images/novalogo.png">
 </div>
 <h3>Todos os direitos reservados ao,<a href="https://portal.sc.senac.br/portal/home/default.aspx"><span class="destaque">SENAC-SC</span> </a></h3></a>
 
