@@ -1,0 +1,40 @@
+.rodape {
+    padding: 32px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: rgb(0, 0, 0);
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    margin-top: 300px;
+}
+
+.junto {
+    padding-left: 10px;
+}
+
+img.rodape-imagem {
+    height: 140px;
+    padding-right: 40%;
+    display: flex;
+    align-items: flex-start;
+}
+
+.for {
+    color: aliceblue;
+    align-items: center;
+}
+
+h2 {
+    display: flex;
+    color: aliceblue;
+    font-variant: unset;
+}
+
+h3 {
+    display: flex;
+    color: aliceblue;
+    font-variant: unset;
+}

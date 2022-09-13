@@ -1,141 +1,157 @@
 <?php
-  include "site/include/MySql.php";
+include_once "head.php";
+include_once "MySql.php";
+include_once "footer.php";
 ?>
 
 <nav class="bg hover-circulo">
 
-  <div class="image">
-    <img src="assets/images/logosenac.png">
+  <div class="container" style="display: flex; align-items: center; justify-content: space-between;">
+
+    <div style="max-height: 400px;" class="tamanho">
+      <img src="assets/images/novalogo.png">
+    </div>
+
+
+
+
+    <div class="usuario">
+      <?php
+
+      if (isset($_SESSION['codigo'])) {
+        $sql = $pdo->prepare('SELECT * FROM usuario WHERE codigo = ' . $_SESSION['codigo']);
+        if($sql->execute()){
+          $info = $sql->fetchAll(PDO::FETCH_ASSOC);
+          $path = "data:image/jpg:charset=utf8;base64," . base64_encode($info[0]['imagem']);
+        }  else{
+          $info="";
+          $path = "";
+        }
+        
+      ?>
+        <div class="dropdown">
+
+          <img width="100px" style="border-radius: 90px;width: 7%;  height: 7%;  overflow: hidden;  width: 55px;  height: 55px;" src="<?php echo $path; ?>">
+          <div class="dropdown-content">
+            <?php
+
+                if (isset($_SESSION['codigo=1'])) {
+                  echo " <a href=altUsuario.php>Alterar</a>
+                  <a href=listUsuario.php>Usuarios</a>";
+                } else {
+                  echo  "<a href=altUsuario.php>Alterar</a>
+                  <a href=listUsuario.php>Usuarios</a>";
+                } ?>
+
+          </div>
+        </div>
+        <h6>Olá <?php
+
+                if (isset($_SESSION['nome'])) {
+                  echo $_SESSION['nome'];
+                } else {
+                  echo  "Visitante";
+                } ?>!!</h6>
+      <?php } else { ?>
+        <img width="100px" style="border-radius: 90px;width: 7%;  height: 7%;  overflow: hidden;  width: 55px;  height: 55px; " src="assets/images/visitante.png">
+      <?php } ?>
+    </div>
+
+    <div class="tul">
+      <a href="index.php" title="Inicio">Inicio</a>
+      <a href="sobre.php" title="Sobre">Sobre</a>
+      <div class="dropdown">
+        <a class="dropbtn">Cardapio</a>
+        <div class="dropdown-content">
+          <a href="refri.html">Bebidas</a>
+          <a href="#">Link 2</a>
+          <a href="#">Link 3</a>
+        </div>
+      </div>
+      <a href="contato.php" title="Contato"><img class="car" src="assets/images/carrinho.png"></a>
+      <button class="per">
+        <?php
+
+        if (!isset($_SESSION['nome'])) {
+
+          echo '<a href="login.php" title="Login">Logar</a>';
+        } else {
+
+          echo '<a href="logout.php" title="Logout">Desconectar-se</a>';
+        }
+
+        ?>
+      </button>
+
+    </div>
   </div>
-  <h1>Olá <?php
+</nav>
 
-if (isset($_SESSION['nome'])) {
-  echo $_SESSION['nome'];
-} else {
-  echo  "Visitante";
-}?> !!</h1>
-  <?php
+<style>
+  .usuario {
+    background-color: white;
+    padding: 10px;
+    border: 1px dashed gray;
+    border-radius: 20px;
+  }
 
-if (isset($_SESSION['codigo'])) {
-  echo "Codigo: ".$_SESSION['codigo'];
-  //$sql = $pdo->prepare('SELECT * FROM usuario WHERE codigo = '.$_SESSION['codigo']);
-  //$sql->execute();
-  //$info = $sql->fetchAll(PDO::FETCH_ASSOC);
-  //$path = "data:image/jpg:charset=utf8;base64," . base64_encode($info[0]['imagem']);
-?>
-  <img width="100px" style="border-radius: 90px;
-width: 7%;
-  height: 7%;
-  overflow: hidden;
-  width: 55px;
-  height: 55px;" src="<?php echo $path; ?>">
-  
-<?php } else { ?>
- 
-  
-  <img width="100px" style="border-radius: 90px;
-width: 7%;
-  height: 7%;
-  overflow: hidden;
-  width: 55px;
-  height: 55px; " src="assets/images/visitante.png">
-<?php } ?>
+  .usuario h6 {
+    color: black;
+  }
 
-
-
-
-          
-
-
-  <style>
-button.dropbtn:focus,
-button.dropbtn:hover {
+  button.dropbtn:focus,
+  button.dropbtn:hover {
     transition: 1ms;
     outline: none;
     color: #ece750;
-}
+  }
 
-    .dropbtn{
+  .dropbtn {
 
-font-size: 140%;
-border: none;
-cursor: pointer;
-font-weight: bold;
-background: url(../images/print.png);
-color: white;
-}
+    font-size: 140%;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+    background: url(../images/print.png);
+    color: white;
+  }
 
-    /* The container <div> - needed to position the dropdown content */
-    .dropdown {
-      position: relative;
-      display: inline-block;
-    }
+  /* The container <div> - needed to position the dropdown content */
+  .dropdown {
+    position: relative;
+    display: inline-block;
+  }
 
-    /* Dropdown Content (Hidden by Default) */
-    .dropdown-content {
-      display: none;
-      position: absolute;
-      background-color: red;
-      min-width: 160px;
-      box-shadow: 0px 8px 16px 0px rgb(0, 0, 0, 0.2);
-      z-index: 1;
-    }
+  /* Dropdown Content (Hidden by Default) */
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color:  #600a0a;
+    min-width: 150px;
+    box-shadow: 0px 8px 16px 0px rgb(0, 0, 0, 0.2);
+    z-index: 1;
+  }
 
-    /* Links inside the dropdown */
-    .dropdown-content a {
-      color: white;
-      padding: 12px 16px;
-      text-decoration: none;
-      display: block;
-    }
+  /* Links inside the dropdown */
+  .dropdown-content a {
+    color: white;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+  }
 
-    /* Change color of dropdown links on hover */
-    .dropdown-content a:hover {
-      background-color: red;
-    }
+  /* Change color of dropdown links on hover */
+  .dropdown-content a:hover {
+    background-color:  #600a0a;
+  }
 
-    /* Show the dropdown menu on hover */
-    .dropdown:hover .dropdown-content {
-      display: block;
-    }
+  /* Show the dropdown menu on hover */
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }
 
-    /* Change the background color of the dropdown button when the dropdown content is shown */
-    .dropdown:hover .dropbtn {
-      background-color: red;
-    } 
-  </style>
-
-  <div class="tul">
-    <a href="index.php" title="Inicio">Inicio</a>
-    
-
-    <a href="sobre.php" title="Sobre">Sobre</a>
-    <div class="dropdown">
-      <button class="dropbtn">Cardapio</button>
-      
-    
-      <div class="dropdown-content">
-        <a href="refri.html">Bebidas</a>
-        <a href="#">Link 2</a>
-        <a href="#">Link 3</a>
-      </div>
-      </div>
-      <a href="contato.php" title="Contato"><img class="car" src="assets/images/carrinho.png"></a>
-    
-    
-    <button class="per">
-    <?php
-    
-    if (!isset($_SESSION['nome'])) {
-
-            echo '<a href="login.php" title="Logout">Logar</a>';
-          } else {
-            
-            echo '<a href="logout.php" title="Logout">Desconectar-se</a>';
-          }
-          
-          ?>
-          </button>
-          
-    </div>
-</nav>
+  /* Change the background color of the dropdown button when the dropdown content is shown */
+  .dropdown:hover .dropbtn {
+    background-color:  #600a0a;
+  }
+</style>

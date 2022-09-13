@@ -1,13 +1,11 @@
 <?php
-include "head.php";
+include_once "head.php";
 ?>
-<?php
+<div class="container">
+    <?php
 
-include "site/paginas/principal.php"
+    include_once "principal.php";
 
-?>
-
-<?php
-include "footer.php";
-?>
+    ?>
+</div>
 

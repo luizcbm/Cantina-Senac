@@ -13,6 +13,8 @@ session_start();
     <link rel="stylesheet" href="./assets/css/style.css">
     <link rel="stylesheet" href="./assets/css/lista.css">
     <link rel="stylesheet" href="./assets/css/cadastro.css">
+    <link rel="stylesheet" href="./assets/css/alterar.css">
+    <link rel="stylesheet" href="./assets/css/footer.css">
     <link rel="stylesheet" href="./assets/css/login.css">
 
 
@@ -35,5 +37,6 @@ $pagina = "fundologin"
 
 
     <?php
-    include "nav.php";
+    include_once "nav.php";
     ?>
+

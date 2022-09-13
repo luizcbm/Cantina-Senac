@@ -1,5 +1,6 @@
 <?php
-include "site/include/MySql.php";
+include_once "MySql.php";
+include "head.php";
 
 $nome = "";
 $email = "";
@@ -89,46 +90,46 @@ if ($_SERVER['REQUEST_METHOD'] == "POST" && isset($_POST['submit'])) {
 }
 
 ?>
-<link rel="stylesheet" href="site/css/cadastro.css">
+<div class="container">
+    <form method="POST" enctype="multipart/form-data">
+        <div class="container-form">
+            <div class="forma">
+         <legend>Cadastro</legend>
+                <br>
+            </div>
+            <div>
+                <input type="text" placeholder="Nome" name="nome" value="<?php echo $nome ?>">
+                <span class="obrigatorio">*<?php echo $nomeErro ?></span>
+            </div>
+            <div>
+                <input type="text" placeholder="Email" name="email" value="<?php echo $email ?>">
+                <span class="obrigatorio">*<?php echo $emailErro ?></span>
+            </div>
+            <div>
+                <input type="text" placeholder="Telefone" name="telefone" value="<?php echo $telefone ?>">
+                <span class="obrigatorio">*<?php echo $telefoneErro ?></span>
+            </div>
+            <div>
+                <input type="password" placeholder="Senha" name="senha" value="<?php echo $senha ?>">
+                <span class="obrigatorio">*<?php echo $senhaErro ?></span>
+            </div>
+         
+<br>
 
-<form method="POST" enctype="multipart/form-data">
-    <div class="container-form">
-        <div class="h1">
-            <legend>Cadastro</legend>
+            <div class="daora">
+                <label class="custom-file-upload">
+                    <input type="file" name="image">
+                    Escolher arquivo
+                </label>
+            </div>
             <br>
-        </div>
-        <div>
-            <input type="text" placeholder="Nome" name="nome" value="<?php echo $nome ?>">
-            <span class="obrigatorio">*<?php echo $nomeErro ?></span>
-        </div>
-        <div>
-            <input type="text" placeholder="Email" name="email" value="<?php echo $email ?>">
-            <span class="obrigatorio">*<?php echo $emailErro ?></span>
-        </div>
-        <div>
-            <input type="text" placeholder="Telefone" name="telefone" value="<?php echo $telefone ?>">
-            <span class="obrigatorio">*<?php echo $telefoneErro ?></span>
-        </div>
-        <div>
-            <input type="password" placeholder="Senha" name="senha" value="<?php echo $senha ?>">
-            <span class="obrigatorio">*<?php echo $senhaErro ?></span>
-        </div>
-        <input type="checkbox" name="administrador">Administrador
+            
+            <div class="bot">
+                <a href="login.php"><button type="submit" name="submit">Salvar</button></a>
 
-
-        <div class="daora">
-            <label class="custom-file-upload">
-                <input type="file" name="image">
-                Escolher arquivo
-            </label>
+            </div>
         </div>
-        <br>
-        <br>
-        <div class="bot">
-            <a href="login.php"><button type="submit" name="submit">Salvar</button></a>
 
-        </div>
-    </div>
-
-</form>
-<span><?php echo $msgErro ?></span>
+    </form>
+    <span><?php echo $msgErro ?></span>
+</div>

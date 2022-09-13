@@ -1,5 +1,7 @@
+
 <?php
-    include "site/include/MySql.php";
+    include_once "MySql.php";
+    include_once "head.php";
 
     $sql = $pdo->prepare('SELECT * FROM usuario');
     if ($sql->execute()){

@@ -1,5 +1,6 @@
 <?php
-    include "../include/MySql.php";
+    include_once "MySql.php";
+
 
     $msgErro = "";
     $codigo = "";
@@ -11,7 +12,7 @@
         if ($sql->execute(array($codigo))){
             if ($sql->rowCount() > 0){
                 $msgErro = "Usuário excluído com sucesso!";
-                header('location:listUsuario.php');
+               header('location:listUsuario.php');
             } else {
                 $msgErro = "Código não localizado!";
             }
@@ -19,5 +20,7 @@
             $msgErro = "Erro ao excluir usuário!";
         }
     }
-    echo "Mensagem de erro: $msgErro";
+    //echo "Mensagem de erro: $msgErro";
+
+    include "head.php";
 ?>

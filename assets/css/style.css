@@ -4,7 +4,13 @@
 }
 
 .car {
-    height: 70px;
+    max-height: 40px;
+}
+
+.tamanho img {
+    display: flex;
+    margin-right: 400px;
+    max-height: 150px;
 }
 
 .banner {
@@ -36,16 +42,15 @@
 .per {
     background-color: dodgerblue;
     border: none;
-    padding: 15px;
+    padding: 5px;
     border-radius: 15px;
     cursor: pointer;
-    margin-left: 400px;
 }
 
 nav.bg {
     width: 100%;
     text-align: center;
-    background-color: red;
+    background-color: #600a0a;
     padding: 0.1em 0em;
     display: flex;
     align-items: center;

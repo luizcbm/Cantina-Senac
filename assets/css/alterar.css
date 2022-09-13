@@ -12,10 +12,15 @@
 }
 
 legend {
-    color: white;
+    color: blue;
     font-size: 70px;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    left: auto;
+}
+
+input {
+    padding: 15px;
+    border-radius: 15px;
+    font-size: 15px;
 }
 
 input {
@@ -34,5 +39,13 @@ input[type=submit] {
 }
 
 .enzo h3 a {
+    color: aliceblue;
+}
+
+.alt {
+    color: aliceblue;
+}
+
+.ter {
     color: aliceblue;
 }
