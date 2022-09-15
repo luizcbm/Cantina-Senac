@@ -4,10 +4,10 @@ include "head.php";
 
 <?php
 
-include "site/paginas/login.php";
+include "paginas/login.php"
 
 ?>
 
 <?php
-include "footer.php";
+include "footer.php"
 ?>

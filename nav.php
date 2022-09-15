@@ -1,9 +1,5 @@
+
 <nav class="bg hover-circulo">
-
-  <div class="image">
-    <img src="site/images/logosenac.png">
-  </div>
-
   <h1>Olá <?php
 
           if (isset($_SESSION['nome'])) {
@@ -14,25 +10,21 @@
 
 
           ?>!!</h1>
-
-
+  <div class="image">
+    <img src="images/logosenac.png">
+  </div>
+  
   <style>
-button.dropbtn:focus,
-button.dropbtn:hover {
-    transition: 1ms;
-    outline: none;
-    color: #ece750;
-}
-
-    .dropbtn{
-
-font-size: 140%;
-border: none;
-cursor: pointer;
-font-weight: bold;
-background: url(../images/print.png);
-color: white;
-}
+    /* Style The Dropdown Button */
+    .dropbtn {
+      padding: 16px;
+      font-size: 140%;
+      border: none;
+      cursor: pointer;
+      font-weight: bold;
+      background-color: red;
+      color: white;
+    }
 
     /* The container <div> - needed to position the dropdown content */
     .dropdown {
@@ -44,9 +36,9 @@ color: white;
     .dropdown-content {
       display: none;
       position: absolute;
-      background-color: red;
+      background-color: #fa1414;
       min-width: 160px;
-      box-shadow: 0px 8px 16px 0px rgb(0, 0, 0, 0.2);
+      box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
       z-index: 1;
     }
 
@@ -60,7 +52,7 @@ color: white;
 
     /* Change color of dropdown links on hover */
     .dropdown-content a:hover {
-      background-color: red;
+      background-color: red
     }
 
     /* Show the dropdown menu on hover */
@@ -71,44 +63,23 @@ color: white;
     /* Change the background color of the dropdown button when the dropdown content is shown */
     .dropdown:hover .dropbtn {
       background-color: red;
-    } 
+    }
   </style>
-
-  <div class="tul">
-    <a href="index.php" title="Inicio">Inicio</a>
+  <div><a href="index.php" title="Inicio">Inicio</a>
+    <a href="contato.php" title="Contato">Contato</a>
     
-
     <a href="sobre.php" title="Sobre">Sobre</a>
     <div class="dropdown">
       <button class="dropbtn">Cardapio</button>
 
       <div class="dropdown-content">
         <a href="refri.html">Bebidas</a>
-        <a href="#">Salgados</a>
-        <a href="#">Doces</a>
+        <a href="#">Link 2</a>
+        <a href="#">Link 3</a>
       </div>
-        </div>
-      <a href="contato.php" title="Carrinho de Compras"><img style="height: 40px; box-shadow: white;"; src="site/images/carrinho.png"></a>
-  
-
-    
-    
-    <button class="per">
-    <?php
-    
-    if (!isset($_SESSION['nome'])) {
-
-            echo '<a href="login.php" title="Logout">Logar</a>';
-          } else {
-            
-            echo '<a href="logout.php" title="Logout">Desconectar-se</a>';
-          }
-          
-          ?>
-          </button>
-          
     </div>
-    <?
-    include "footer.php";
-    ?>
+     <div class="logi">
+    <a href="logout.php" title="Logout">Logout</a>
+    </div>
+  </div>
 </nav>

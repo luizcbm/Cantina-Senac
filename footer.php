@@ -1,36 +1,3 @@
-
-<footer class="rodape">
-
-
-        <img class="rodape-imagem" src="site/images/logosemfundo.png" alt="">
-
-        <div style=" padding: 32px; display: flex; flex-direction: row; justify-content: space-around; align-items: center;"; class="margin">
-
-            <ul>
-
-                <a href="https://www.instagram.com/cantinasenac/"><img style=" max-width: 40px;" src="site/images/insta.png" alt=""></a>
-
-            </ul>
-
-            <ul>
-
-                <a href="https://twitter.com/CantinaSenac"><img style=" max-width: 40px;" src="site/images/passaro.png"></a>
-
-            </ul>
-
-            <ul>
-
-                <a href="https://www.facebook.com/cantinasenac/"><img style=" max-width: 40px; margin: ; " src="site/images/face.png"></a>
-
-            </ul>
-
-        </div>
-    
-    </footer>
-    
-
-
-
-
-
-
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
+</body>
+</html>

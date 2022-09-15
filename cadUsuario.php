@@ -3,9 +3,9 @@ include "head.php";
 ?>
 
 
- <div class="container  mx-auto p-5"> 
+ <div class="container  mx-auto p-5 bg-white"> 
     <?php
-    include "site/paginas/cadUsuario.php"
+    include "paginas/cadUsuario.php"
     ?>
 </div>
 
