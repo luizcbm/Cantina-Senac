@@ -1,0 +1,41 @@
+body {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    background-color: black;
+    background: url('https://img.lovepik.com/freevector/32/40/81/75b58PICnJypdb4E013fA_PIC2018.jpg') center center no-repeat fixed;
+    ;
+}
+
+.bolo {
+    background-image: linear-gradient(45deg, white, red, black);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 80px;
+    border-radius: 15px;
+}
+
+legend {
+    color: white;
+    font-size: 70px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+input {
+    padding: 15px;
+    border-radius: 15px;
+    font-size: 15px;
+}
+
+input[type=submit] {
+    background-color: dodgerblue;
+    border: none;
+    padding: 15px;
+    width: 100%;
+    border-radius: 15px;
+    cursor: pointer;
+}
+
+.enzo h3 a {
+    color: aliceblue;
+}

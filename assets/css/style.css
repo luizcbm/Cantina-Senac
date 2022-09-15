@@ -1,0 +1,122 @@
+body {
+    background: url('2wCEAAoHCBUVFRUWFRUYFRgaHR0cGRwcHBoZGRgZGBwcGRkcGBgdJC4lHB4rHxwaKzgmKzA0NTU1GiQ7QDs0Py40NTEBDAwMEA8QHxISHz8sJSU0NDQ9NDY0NDQ2NDQ0NDQ0NDQ0NDQ6NDQ0NDY0NDQ0NDQ0NDU0NjQ0NDQ0NDY0NDQ0NP.jpg') center center no-repeat fixed;
+}
+
+.image {
+    text-align: left;
+    display: flex;
+}
+
+.banner {
+    width: 100%;
+    height: 400px;
+    background: url(../images/leand.jpg) no-repeat center;
+    background-size: cover;
+    text-align: center;
+}
+
+.carousel {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    height: 900%;
+    font-size: 900%;
+}
+
+.Login {
+    color: aliceblue;
+}
+
+.logi {
+    padding-right: 10px;
+    display: flex;
+}
+
+nav.bg {
+    width: 100%;
+    float: left;
+    text-align: center;
+    background-color: red;
+    padding: 0.1em 0em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+nav a {
+    position: relative;
+    display: inline-block;
+    margin: 5px 30px;
+    outline: none;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.3em;
+    transition: 0.6s;
+}
+
+nav a:hover,
+nav a:focus {
+    transition: 0.4s;
+    outline: none;
+    color: #50e6ec;
+}
+
+.footer {
+    color: white;
+}
+
+
+/* Efeito circulo */
+
+.hover-circulo a::before,
+.hover-circulo a::after {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 75px;
+    height: 75px;
+    border: 2px solid rgb(51, 135, 231);
+    border-radius: 50%;
+    content: '';
+    opacity: 0;
+    -webkit-transition: -webkit-transform 0.3s, opacity 0.3s;
+    -moz-transition: -moz-transform 0.3s, opacity 0.3s;
+    transition: transform 0.3s, opacity 0.3s;
+    -webkit-transform: translateX(-50%) translateY(-50%) scale(0.2);
+    -moz-transform: translateX(-50%) translateY(-50%) scale(0.2);
+    transform: translateX(-50%) translateY(-50%) scale(0.2);
+}
+
+.hover-circulo a::after {
+    width: 50px;
+    height: 50px;
+    border-width: 6px;
+    -webkit-transform: translateX(-50%) translateY(-50%) scale(0.8);
+    -moz-transform: translateX(-50%) translateY(-50%) scale(0.8);
+    transform: translateX(-50%) translateY(-50%) scale(0.8);
+}
+
+.hover-circulo a:hover::before,
+.hover-circulo a:hover::after,
+.hover-circulo a:focus::before,
+.hover-circulo a:focus::after {
+    opacity: 1;
+    -webkit-transform: translateX(-50%) translateY(-50%) scale(1);
+    -moz-transform: translateX(-50%) translateY(-50%) scale(1);
+    transform: translateX(-50%) translateY(-50%) scale(1);
+}
+
+
+/* Efeito Hover Circulo */
+
+.bn {
+    align-items: center;
+    display: flex;
+}
+
+.img {
+    display: flex;
+}
