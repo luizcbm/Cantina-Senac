@@ -27,5 +27,5 @@ if ($sql->execute()) {
 ?>
 <link rel="stylesheet" href="assets/css/refri.css">
 <?php
-include "footer.php"
+//include "footer.php"
 ?>
