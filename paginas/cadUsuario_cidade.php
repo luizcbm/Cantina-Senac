@@ -1,6 +1,5 @@
 <?php
-include_once "MySql.php";
-include "head.php";
+include "../include/MySql.php";
 
 $nome = "";
 $email = "";
@@ -8,6 +7,7 @@ $telefone = "";
 $senha = "";
 $administrador = "";
 $imgContent = "";
+$cidade="";
 
 $nomeErro = "";
 $emailErro = "";
@@ -52,15 +52,21 @@ if ($_SERVER['REQUEST_METHOD'] == "POST" && isset($_POST['submit'])) {
                 $administrador = 1;
             else
                 $administrador = 0;
+         
+        if(empty($_POST['cidade'])){
+            $cidadeErro = "cidade obrigatoria";
+        } else {
+            $cidade = $_POST['cidade'];
+        }
 
             if ($email && $nome && $senha && $telefone) {
                 //Verificar se ja existe o email
-                $sql = $pdo->prepare("SELECT * FROM USUARIO WHERE email = ?");
+                $sql = $pdo->prepare("SELECT * FROM USUARIO1 WHERE email = ?");
                 if ($sql->execute(array($email))) {
                     if ($sql->rowCount() <= 0) {
-                        $sql = $pdo->prepare("INSERT INTO USUARIO (codigo, nome, email, telefone, senha, administrador, IMAGEM)
-                                                VALUES (null, ?, ?, ?, ?, ?, ?)");
-                        if ($sql->execute(array($nome, $email, $telefone, md5($senha), $administrador, $imgContent))) {
+                        $sql = $pdo->prepare("INSERT INTO USUARIO1 (codigo, nome, email, telefone, senha, administrador, IMAGEM, codCidade)
+                                                VALUES (null, ?, ?, ?, ?, ?, ?,?)");
+                        if ($sql->execute(array($nome, $email, $telefone, md5($senha), $administrador, $imgContent, $cidade))) {
                             $msgErro = "Dados cadastrados com sucesso!";
                             $nome = "";
                             $email = "";
@@ -90,31 +96,42 @@ if ($_SERVER['REQUEST_METHOD'] == "POST" && isset($_POST['submit'])) {
 }
 
 ?>
-<div class="container">
+    <link rel="stylesheet" href="site/css/cadastro.css">
+
     <form method="POST" enctype="multipart/form-data">
-        <div class="container-form">
-            <div class="forma">
-         <legend>Cadastro</legend>
+        <div class="nav">
+            <div class="h1">
+                <legend>Cadastro</legend>
                 <br>
             </div>
-            <div>
-                <input type="text" placeholder="Nome" name="nome" value="<?php echo $nome ?>">
-                <span class="obrigatorio">*<?php echo $nomeErro ?></span>
-            </div>
-            <div>
-                <input type="text" placeholder="Email" name="email" value="<?php echo $email ?>">
-                <span class="obrigatorio">*<?php echo $emailErro ?></span>
-            </div>
-            <div>
-                <input type="text" placeholder="Telefone" name="telefone" value="<?php echo $telefone ?>">
-                <span class="obrigatorio">*<?php echo $telefoneErro ?></span>
-            </div>
-            <div>
-                <input type="password" placeholder="Senha" name="senha" value="<?php echo $senha ?>">
-                <span class="obrigatorio">*<?php echo $senhaErro ?></span>
-            </div>
-         
-<br>
+            <input type="text" placeholder="Nome" name="nome" value="<?php echo $nome ?>">
+            <span class="obrigatorio">*<?php echo $nomeErro ?></span>
+            <br>
+            <input type="text" placeholder="Email" name="email" value="<?php echo $email ?>">
+            <span class="obrigatorio">*<?php echo $emailErro ?></span>
+            <br>
+            <input type="text" placeholder="Telefone" name="telefone" value="<?php echo $telefone ?>">
+            <span class="obrigatorio">*<?php echo $telefoneErro ?></span>
+            <br>
+            <input type="password" placeholder="Senha" name="senha" value="<?php echo $senha ?>">
+            <span class="obrigatorio">*<?php echo $senhaErro ?></span>
+            <br>
+            cidade1:
+     <select name="cidade">       
+<?php
+ $sql1= $pdo->prepare("SELECT * FROM cidade");
+if ($sql1->execute()){
+    $info = $sql1->fetchall(PDO::FETCH_ASSOC);
+    foreach($info as $key => $value){
+    echo '<option value='.$value['codigo'].'>'.$value['nome'].'</option>';
+}
+}
+?>
+</select>
+
+            <br>        
+            <input type="checkbox" name="administrador">Administrador
+            <br>
 
             <div class="daora">
                 <label class="custom-file-upload">
@@ -123,21 +140,12 @@ if ($_SERVER['REQUEST_METHOD'] == "POST" && isset($_POST['submit'])) {
                 </label>
             </div>
             <br>
-            
-            <div class="bot">
+            <br>
+            <div class="button">
                 <a href="login.php"><button type="submit" name="submit">Salvar</button></a>
 
-<<<<<<< HEAD
             </div>
         </div>
-=======
- <div class="container  mx-auto p-5 bg-white"> 
-    <?php
-    include "paginas/cadUsuario.php"
-    ?>
-</div>
->>>>>>> 203bf6e0bc006b5f8568396e4de8619bf4c07f8e
 
     </form>
     <span><?php echo $msgErro ?></span>
-</div>

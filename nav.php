@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <?php
 include_once "head.php";
 include_once "MySql.php";
@@ -166,3 +167,90 @@ include_once "MySql.php";
 
 
 
+=======
+
+<nav class="bg hover-circulo">
+  <h1>Olá <?php
+
+          if (isset($_SESSION['nome'])) {
+            echo $_SESSION['nome'];
+          } else {
+            echo  "Visitante";
+          }
+
+
+          ?>!!</h1>
+  <div class="image">
+    <img src="images/logosenac.png">
+  </div>
+  
+  <style>
+    /* Style The Dropdown Button */
+    .dropbtn {
+      padding: 16px;
+      font-size: 140%;
+      border: none;
+      cursor: pointer;
+      font-weight: bold;
+      background-color: red;
+      color: white;
+    }
+
+    /* The container <div> - needed to position the dropdown content */
+    .dropdown {
+      position: relative;
+      display: inline-block;
+    }
+
+    /* Dropdown Content (Hidden by Default) */
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      background-color: #fa1414;
+      min-width: 160px;
+      box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+      z-index: 1;
+    }
+
+    /* Links inside the dropdown */
+    .dropdown-content a {
+      color: white;
+      padding: 12px 16px;
+      text-decoration: none;
+      display: block;
+    }
+
+    /* Change color of dropdown links on hover */
+    .dropdown-content a:hover {
+      background-color: red
+    }
+
+    /* Show the dropdown menu on hover */
+    .dropdown:hover .dropdown-content {
+      display: block;
+    }
+
+    /* Change the background color of the dropdown button when the dropdown content is shown */
+    .dropdown:hover .dropbtn {
+      background-color: red;
+    }
+  </style>
+  <div><a href="index.php" title="Inicio">Inicio</a>
+    <a href="contato.php" title="Contato">Contato</a>
+    
+    <a href="sobre.php" title="Sobre">Sobre</a>
+    <div class="dropdown">
+      <button class="dropbtn">Cardapio</button>
+
+      <div class="dropdown-content">
+        <a href="refri.html">Bebidas</a>
+        <a href="#">Link 2</a>
+        <a href="#">Link 3</a>
+      </div>
+    </div>
+     <div class="logi">
+    <a href="logout.php" title="Logout">Logout</a>
+    </div>
+  </div>
+</nav>
+>>>>>>> 203bf6e0bc006b5f8568396e4de8619bf4c07f8e

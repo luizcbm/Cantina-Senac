@@ -1,13 +1,10 @@
-
 <?php
-    include_once "MySql.php";
-    include_once "head.php";
+    include "site/include/MySql.php";
 
     $sql = $pdo->prepare('SELECT * FROM usuario');
     if ($sql->execute()){
         $info = $sql->fetchAll(PDO::FETCH_ASSOC);
 
-<<<<<<< HEAD
         echo "<table border='1'>";
         echo "<tr>";
         echo "  <th>Código</th>";
@@ -43,14 +40,3 @@
 <input type="button" value="Cadastrar" onclick="parent.location='cadUsuario.php'">
 
 <h3><a href="principal.php">Tela Principal</a></h3>
-=======
-<div class="container w-75 mx-auto p-5 bg-white">
-    <?php
-    include "paginas/listUsuario.php"
-    ?>
-</div>
-
-<?php
-include "footer.php"
-?>
->>>>>>> 203bf6e0bc006b5f8568396e4de8619bf4c07f8e

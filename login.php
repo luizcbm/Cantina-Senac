@@ -49,6 +49,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 }
 
 
+<<<<<<< HEAD
 
 ?>
 
@@ -79,3 +80,12 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         <span><?php echo $msgErro ?></span>
     </div>
 </div>
+=======
+include "paginas/login.php"
+
+?>
+
+<?php
+include "footer.php"
+?>
+>>>>>>> 203bf6e0bc006b5f8568396e4de8619bf4c07f8e
