@@ -3,6 +3,7 @@ include_once "MySql.php";
 include_once "functions.php";
 include_once "head.php";
 
+
 // $_SESSION['nome'] = "";
 // $_SESSION['administrador'] = "";
 // $_SESSION['codigo'] = "";

@@ -8,4 +8,10 @@ include_once "head.php";
 
     ?>
 </div>
+<?php
+include "cel.html";
+?>
+<?php
+include_once "footer.php";
+?>
 

@@ -1,8 +1,9 @@
 <?php
 include_once "head.php";
 include_once "MySql.php";
-include_once "footer.php";
+
 ?>
+
 
 <nav class="bg hover-circulo">
 
@@ -77,7 +78,7 @@ include_once "footer.php";
           echo '<a href="login.php" title="Login">Logar</a>';
         } else {
 
-          echo '<a href="logout.php" title="Logout">Desconectar-se</a>';
+          echo '<a href="logout.php" title="Logout">Sair</a>';
         }
 
         ?>
@@ -85,7 +86,11 @@ include_once "footer.php";
 
     </div>
   </div>
+
 </nav>
+
+
+
 
 <style>
   .usuario {
@@ -154,4 +159,10 @@ include_once "footer.php";
   .dropdown:hover .dropbtn {
     background-color:  #600a0a;
   }
+
+
 </style>
+
+
+
+
