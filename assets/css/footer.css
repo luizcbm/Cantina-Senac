@@ -1,3 +1,15 @@
+.rodape {
+    height: 200px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: rgb(0, 0, 0);
+    position: inherit;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+}
+
 .junto {
     padding-left: 10px;
 }
@@ -7,6 +19,7 @@ img.rodape-imagem {
     padding-right: 40%;
     display: flex;
     align-items: flex-start;
+    width: 50px;
 }
 
 .for {

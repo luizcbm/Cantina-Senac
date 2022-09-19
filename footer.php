@@ -1,16 +1,8 @@
-<?php
-include_once "head.php";
-?>
-
-
 
 
 <footer class="rodape">
-
-
-
 <div class="junto">
-<img class="rodape-imagem" src="assets/images/novalogo.png">
+<img class="rodape-imagem" src="assets/images/novalogo1.png">
 </div>
 <h3>Todos os direitos reservados ao,<a href="https://portal.sc.senac.br/portal/home/default.aspx"><span class="destaque">SENAC-SC</span> </a></h3></a>
 

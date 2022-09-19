@@ -16,19 +16,12 @@ session_start();
     <link rel="stylesheet" href="./assets/css/cadastro.css">
     <link rel="stylesheet" href="./assets/css/alterar.css">
     <link rel="stylesheet" href="./assets/css/footer.css">
-    <link rel="stylesheet" href="./assets/css/carrosel.css">
+    <link href="https://cdn.jsdelivr.net/npm/swiffy-slider@1.5.3/dist/css/swiffy-slider.min.css" rel="stylesheet" crossorigin="anonymous">
+    <link rel="stylesheet" href="./assets/css/carrousel.css">
     <link rel="stylesheet" href="./assets/css/login.css">
 
-=======
-    <link rel="stylesheet" href="assets/css/principal.css">
-    <link rel="stylesheet" href="assets/css/style.css">
-    <link rel="stylesheet" href="assets/css/lista.css">
-    <link rel="stylesheet" href="assets/css/cadastro.css">
-    <link rel="stylesheet" href="assets/bebidas.php">
-    <link rel="stylesheet" href="assets/css/login.css">
-   
->>>>>>> 203bf6e0bc006b5f8568396e4de8619bf4c07f8e
 
+    <script src="https://cdn.jsdelivr.net/npm/swiffy-slider@1.5.3/dist/js/swiffy-slider.min.js" crossorigin="anonymous" defer></script>
     <script src="assets/js/index.js"></script>
     <title>Cantina Senac</title>
 

@@ -1,7 +1,8 @@
 body {
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-<<<<<<< HEAD:assets/css/login.css
-    background: url(../images/fund.png);
+    background-color: black;
+    background: url(../images/fundo.png) center center no-repeat fixed;
+    ;
 }
 
 .bolo {
@@ -10,8 +11,7 @@ body {
     border-radius: 15px;
     margin: 0 auto;
     width: 30%;
-=======
-    background-color: black;
+    =======background-color: black;
     background: url(../images/fundo.png) center center no-repeat fixed;
     ;
 }
@@ -24,7 +24,7 @@ body {
     transform: translate(-50%, -50%);
     padding: 80px;
     border-radius: 15px;
->>>>>>> 203bf6e0bc006b5f8568396e4de8619bf4c07f8e:site/css/login.css
+    >>>>>>>203bf6e0bc006b5f8568396e4de8619bf4c07f8e: site/css/login.css
 }
 
 legend {
