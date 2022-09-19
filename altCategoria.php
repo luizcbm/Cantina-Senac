@@ -12,12 +12,11 @@ $msgErro = "";
 
 if (isset($_GET['id'])) {
     $codigo = $_GET['id'];
-    $sql = $pdo->prepare("SELECT * FROM categoria WHERE codigo = ?");
-    if ($sql->execute(array($codigo))) {
+    $sql = $pdo->prepare("SELECT * FROM categoria ?");
+    if ($sql->execute(array($categoria))) {
         $info = $sql->fetchAll(PDO::FETCH_ASSOC);
         foreach ($info as $key => $value) {
-            $codigo = $value['codigo'];
-            $categoria = $value['nome'];
+            $categoria = $value['categoria'];
             $descricao = $value['descricao'];
         }
     }
@@ -44,7 +43,7 @@ if ($_SERVER['REQUEST_METHOD'] == "POST" && isset($_POST['submit'])) {
 
         if ($sql->execute(array( $categoria, $descricao,))) {
             $msgErro = "Dados alterados com sucesso!";
-            header('location:listProdutos.php');
+            header('location:listcategoria.php');
         } else {
             $msgErro = "Dados não cadastrados!";
         }

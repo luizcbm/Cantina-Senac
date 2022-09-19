@@ -1,32 +1,25 @@
 <?php
     include "../include/MySql.php";
 
-    $sql = $pdo->prepare('SELECT * FROM Produtos');
+    $sql = $pdo->prepare('SELECT * FROM categoria');
     if ($sql->execute()){
         $info = $sql->fetchAll(PDO::FETCH_ASSOC);
 
         echo "<table border='1'>";
         echo "<tr>";
-        echo "  <th>Codigo</th>";
-        echo "  <th>nome</th>";    
-        echo "  <th>descricao</th>";
-        echo "  <th>valor</th>";
-        echo "  <th>Imagem</th>";
+        echo "  <th>categoria</th>";
+        echo "  <th>descricao</th>";    
         echo "  <th>Alterar</th>";
         echo "  <th>Excluir</th>";
 
         echo "</tr>";
         foreach($info as $key => $value){
             echo "<tr>";
-            echo "<td>".$value['codigo']."</td>";
-            echo "<td>".$value['nome']."</td>";
+            echo "<td>".$value['categoria']."</td>";
             echo "<td>".$value['descricao']."</td>";
-            echo "<td>".$value['valor']."</td>";
-            $imagem = $value['imagem'];
 
-            echo '<td><img style="width:80px;" src="data:image/jpg:charset=utf8;base64,'.base64_encode($imagem).'"></td>';
-            echo "<td><center><a href='altProdutos.php?id=".$value['codigo']."'>(+)</a></center></td>";
-            echo "<td><center><a href='delProdutos.php?id=".$value['codigo']."'>(-)</a></center></td>";
+            echo "<td><center><a href='altCategoria.php?id=".$value['codigo']."'>(+)</a></center></td>";
+            echo "<td><center><a href='delCategoria.php?id=".$value['codigo']."'>(-)</a></center></td>";
             echo "</tr>";
         }
         echo "</table>";
