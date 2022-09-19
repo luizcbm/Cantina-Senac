@@ -9,6 +9,7 @@ session_start();
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css">
+<<<<<<< HEAD
     <link rel="stylesheet" href="./assets/css/principal.css">
     <link rel="stylesheet" href="./assets/css/style.css">
     <link rel="stylesheet" href="./assets/css/lista.css">
@@ -25,21 +26,12 @@ session_start();
     <title>Cantina Senac</title>
 
 </head>
-<?php 
-$pagina = "fundologin"
-// fazer uma fução php -> Verificar qual a pagina vc esta.
-// if(login){
-//  $pagina = "fundoLogin"
-// } else if (cadastro){
-//     $pagina = "fundocadastro"
-// }
 
-?>
-<body id="<?php echo $pagina?>">
-
-
+<body>
 
     <?php
     include_once "nav.php";
     ?>
+
+    
 
