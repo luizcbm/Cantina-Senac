@@ -142,7 +142,7 @@ include_once "MySql.php";
 
   /* Change color of dropdown links on hover */
   .dropdown-content a:hover {
-    background-color:  #600a0a;
+    background-color:  #600a0a
   }
 
   /* Show the dropdown menu on hover */

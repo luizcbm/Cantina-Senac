@@ -30,7 +30,7 @@ input {
     color: aliceblue;
 }
 
-.bot {
+button {
     background-color: dodgerblue;
     border: none;
     padding: 8px;

@@ -1,6 +1,8 @@
-#fundologin {
+body {
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    background: url(../images/fundo.png);
+    background-color: black;
+    background: url(../images/fundo.png) center center no-repeat fixed;
+    ;
 }
 
 .bolo {
