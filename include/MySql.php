@@ -14,7 +14,11 @@
     } catch(Exception $e){
         echo "Erro: $e";
     }
+<<<<<<< HEAD
+ 
+=======
 
+>>>>>>> dc29c29a14881fad7d5ec9443a19121abeb2aa89
 
 
 ?>
