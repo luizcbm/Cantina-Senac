@@ -1,13 +1,11 @@
 <?php
-include "head.php";
+include_once "nav.php";
+include "cel.php";
 ?>
+<div class="container">
+
+<h1>Promoções do dia</h1>
+</div>
 <?php
-
-include "site/paginas/principal.php"
-
+include_once "footer.php";
 ?>
-<link rel="stylesheet" href="site/css/style.css">
-<?php
-include "footer.php";
-?>
-
