@@ -2,32 +2,18 @@
     color: red;
 }
 
-<<<<<<< HEAD:assets/css/cadastro.css
 .container {
     align-items: center;
 }
 
 .container-form {
+    text-align: center;
     background-color: black;
-    padding: 90px;
-=======
-body {
-    background: url('https://img.lovepik.com/freevector/32/40/81/75b58PICnJypdb4E013fA_PIC2018.jpg') center center no-repeat fixed;
-    background-color: black;
-}
-
-.nav {
-    color: black;
-    background-image: linear-gradient(45deg, white, yellow, black);
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    padding: 80px;
->>>>>>> 203bf6e0bc006b5f8568396e4de8619bf4c07f8e:site/css/cadastro.css
+    padding: 58px;
     border-radius: 15px;
     margin: 0 auto;
     width: 30%;
+    margin-top: 95px;
 }
 
 input {
@@ -36,15 +22,21 @@ input {
     font-size: 15px;
 }
 
+
+/*botão de salvar*/
+
 [type=submit] {
     background-color: dodgerblue;
     border: none;
     padding: 8px;
-    width: 95%;
+    width: 50%;
     border-radius: 15px;
     cursor: pointer;
     color: aliceblue;
 }
+
+
+/*botão de logar*/
 
 button {
     background-color: dodgerblue;
@@ -55,13 +47,15 @@ button {
     color: white;
 }
 
+
+/*botão escolher arquivo*/
+
 .daora {
-    background-color: dodgerblue;
     border: none;
     padding: 4px;
     border-radius: 15px;
     cursor: pointer;
-    color: white;
+    color: dodgerblue;
 }
 
 legend {
@@ -73,13 +67,9 @@ input[type="file"] {
 }
 
 .custom-file-upload {
-    background-color: dodgerblue;
     border: none;
     padding: 15px;
-    width: 100%;
-    border-radius: 15px;
     cursor: pointer;
-    left: 20px;
 }
 
 .galho {

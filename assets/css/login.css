@@ -1,37 +1,32 @@
-body {
+#fundologin {
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    background-color: black;
-    background: url(../images/fundo.png) center center no-repeat fixed;
-    ;
+    background: url(../images/fundo.png);
 }
 
 .bolo {
+    text-align: center;
     background-color: black;
-    padding: 80px;
+    padding: 58px;
     border-radius: 15px;
     margin: 0 auto;
     width: 30%;
-    =======background-color: black;
-    background: url(../images/fundo.png) center center no-repeat fixed;
-    ;
-}
-
-.bolo {
-    background-image: linear-gradient(45deg, white, red, black);
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    padding: 80px;
-    border-radius: 15px;
-    >>>>>>>203bf6e0bc006b5f8568396e4de8619bf4c07f8e: site/css/login.css
+    margin-top: 95px;
 }
 
 legend {
     color: white;
-    font-size: 70px;
+    font-size: 50px;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     left: auto;
+}
+
+a {
+    color: aliceblue;
+    font-size: 20px;
+}
+
+a:hover {
+    color: darkgrey;
 }
 
 input {
@@ -43,10 +38,11 @@ input {
 input[type=submit] {
     background-color: dodgerblue;
     border: none;
-    padding: 15px;
+    padding: 8px;
     width: 50%;
     border-radius: 15px;
     cursor: pointer;
+    color: aliceblue;
 }
 
 .enzo h3 a {

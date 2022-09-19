@@ -114,7 +114,6 @@ if ($_SERVER['REQUEST_METHOD'] == "POST" && isset($_POST['submit'])) {
                 <span class="obrigatorio">*<?php echo $senhaErro ?></span>
             </div>
          
-<br>
 
             <div class="daora">
                 <label class="custom-file-upload">
@@ -122,21 +121,15 @@ if ($_SERVER['REQUEST_METHOD'] == "POST" && isset($_POST['submit'])) {
                     Escolher arquivo
                 </label>
             </div>
-            <br>
             
             <div class="bot">
                 <a href="login.php"><button type="submit" name="submit">Salvar</button></a>
 
-<<<<<<< HEAD
             </div>
         </div>
-=======
- <div class="container  mx-auto p-5 bg-white"> 
-    <?php
-    include "paginas/cadUsuario.php"
-    ?>
-</div>
->>>>>>> 203bf6e0bc006b5f8568396e4de8619bf4c07f8e
+    
+    
+    </div>
 
     </form>
     <span><?php echo $msgErro ?></span>

@@ -2,7 +2,7 @@
 include_once "nav.php";
 ?>
 
-<div  style =" background:#F7F7F5 ; margin-top: 20px;" class ="container " >
+<div  style =" background:#F7F7F5 ;" class ="container " >
     <!-- quando mudar o rodape diminuir margem bottom -->
     <div style="margin-bottom: 250px;" class ="w-75 bg-gray mx-auto " >
         <h1  style =" color: black ; " > Conheça um pouco mais sobre o Cantina senac</h1>
