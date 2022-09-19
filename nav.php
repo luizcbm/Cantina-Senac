@@ -1,7 +1,7 @@
 <?php
 include_once "head.php";
 include_once "MySql.php";
-include_once "footer.php";
+
 ?>
 
 <nav class="bg hover-circulo">
@@ -155,3 +155,4 @@ include_once "footer.php";
     background-color:  #600a0a;
   }
 </style>
+

@@ -1,11 +1,11 @@
 <?php
-include_once "head.php";
+include_once "nav.php";
+include "cel.php";
 ?>
 <div class="container">
-    <?php
 
-    include_once "principal.php";
-
-    ?>
+<h1>Promoções do dia</h1>
 </div>
-
+<?php
+include_once "footer.php";
+?>
