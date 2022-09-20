@@ -69,7 +69,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                 <input type="submit" value="Login" name="login">
             </div>
             <div class="enzo">
-            <a href="cadUsuario.php">Cadastrar</a>
+            <a class="cad" href="cadUsuario.php">Cadastrar</a>
             </div>
         </form>
         <span><?php echo $msgErro ?></span>

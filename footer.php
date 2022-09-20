@@ -6,7 +6,7 @@
 <div class="junto">
 <img class="rodape-imagem" src="assets/images/novalogo1.png">
 </div>
-<h3>Todos os direitos reservados ao,<a href="https://portal.sc.senac.br/portal/home/default.aspx"><span class="destaque">SENAC-SC</span> </a></h3></a>
+<h3>Todos os direitos reservados ao,<a href="https://portal.sc.senac.br/portal/home/default.aspx"><span class="destaque">SENAC-SC</span> </a></h3>
 
 <div style=" padding: 32px; display: flex; flex-direction: row; justify-content: space-around; align-items: center;" class="margin">
     <ul>
@@ -23,6 +23,7 @@
 .destaque{
     color: 	#1E90FF;
     font-weight: bold;
+    text-decoration: none;
 }
 
 </style>

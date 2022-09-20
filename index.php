@@ -1,5 +1,5 @@
 <?php
-include_once "nav.php";
+include_once "head.php";
 include "cel.php";
 ?>
 <div class="container">
