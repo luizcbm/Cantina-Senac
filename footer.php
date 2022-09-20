@@ -1,15 +1,12 @@
-<<<<<<< HEAD
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
 </body>
 </html>
-=======
-
 
 <footer class="rodape">
 <div class="junto">
 <img class="rodape-imagem" src="assets/images/novalogo1.png">
 </div>
-<h3>Todos os direitos reservados ao,<a href="https://portal.sc.senac.br/portal/home/default.aspx"><span class="destaque">SENAC-SC</span> </a></h3></a>
+<h3>Todos os direitos reservados ao,<a href="https://portal.sc.senac.br/portal/home/default.aspx"><span class="destaque">SENAC-SC</span> </a></h3>
 
 <div style=" padding: 32px; display: flex; flex-direction: row; justify-content: space-around; align-items: center;" class="margin">
     <ul>
@@ -26,8 +23,8 @@
 .destaque{
     color: 	#1E90FF;
     font-weight: bold;
+    text-decoration: none;
 }
 
 </style>
 </footer>
->>>>>>> dc29c29a14881fad7d5ec9443a19121abeb2aa89

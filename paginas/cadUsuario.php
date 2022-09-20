@@ -1,5 +1,5 @@
 <?php
-include "site/include/MySql.php";
+include_once "MySql.php";
 
 $nome = "";
 $email = "";
@@ -88,43 +88,5 @@ if ($_SERVER['REQUEST_METHOD'] == "POST" && isset($_POST['submit'])) {
     }
 }
 
-?>
-    <link rel="stylesheet" href="site/css/cadastro.css">
+   
 
-    <form method="POST" enctype="multipart/form-data">
-        <div class="nav">
-            <div class="h1">
-                <legend>Cadastro</legend>
-                <br>
-            </div>
-            <input type="text" placeholder="Nome" name="nome" value="<?php echo $nome ?>">
-            <span class="obrigatorio">*<?php echo $nomeErro ?></span>
-            <br>
-            <input type="text" placeholder="Email" name="email" value="<?php echo $email ?>">
-            <span class="obrigatorio">*<?php echo $emailErro ?></span>
-            <br>
-            <input type="text" placeholder="Telefone" name="telefone" value="<?php echo $telefone ?>">
-            <span class="obrigatorio">*<?php echo $telefoneErro ?></span>
-            <br>
-            <input type="password" placeholder="Senha" name="senha" value="<?php echo $senha ?>">
-            <span class="obrigatorio">*<?php echo $senhaErro ?></span>
-            <br>
-            <input type="checkbox" name="administrador">Administrador
-            <br>
-
-            <div class="daora">
-                <label class="custom-file-upload">
-                    <input type="file" name="image">
-                    Escolher arquivo
-                </label>
-            </div>
-            <br>
-            <br>
-            <div class="button">
-                <a href="login.php"><button type="submit" name="submit">Salvar</button></a>
-
-            </div>
-        </div>
-
-    </form>
-    <span><?php echo $msgErro ?></span>

@@ -47,10 +47,6 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         }
     }
 }
-
-
-<<<<<<< HEAD
-
 ?>
 
 <div class="container">
@@ -59,8 +55,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
         <form method="POST" action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']); ?>">
             <div class="h1">
-                <legend>Login</legend>
-                <br>
+                <legend>Entrar</legend>
                 <br>
             </div>
             <label for="email"></label>
@@ -74,18 +69,13 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                 <input type="submit" value="Login" name="login">
             </div>
             <div class="enzo">
-                <h3><a href="cadUsuario.php">Cadastrar</a></h3>
+            <a class="cad" href="cadUsuario.php">Cadastrar</a>
             </div>
         </form>
         <span><?php echo $msgErro ?></span>
     </div>
 </div>
-=======
-include "paginas/login.php"
-
-?>
 
 <?php
 include "footer.php"
 ?>
->>>>>>> 203bf6e0bc006b5f8568396e4de8619bf4c07f8e
