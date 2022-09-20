@@ -49,12 +49,11 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 }
 ?>
 
-<div class="container">
+<div class="container fundo">
     <div class="bolo">
-
-
         <form method="POST" action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']); ?>">
             <div class="h1">
+                <img style="width: 169px ;" src="./assets/images/chapéu.png">
                 <legend>Entrar</legend>
                 <br>
             </div>
@@ -69,7 +68,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                 <input type="submit" value="Login" name="login">
             </div>
             <div class="enzo">
-            <a class="cad" href="cadUsuario.php">Cadastrar</a>
+                <a class="cad" href="cadUsuario.php">Cadastrar</a>
             </div>
         </form>
         <span><?php echo $msgErro ?></span>
@@ -77,5 +76,5 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 </div>
 
 <?php
-include "footer.php"
+include "footer.php";
 ?>

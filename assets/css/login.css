@@ -20,12 +20,12 @@ legend {
     left: auto;
 }
 
-a {
+a.cad {
     color: aliceblue;
     font-size: 20px;
 }
 
-a:hover {
+a.cad:hover {
     color: darkgrey;
 }
 

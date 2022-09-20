@@ -1,27 +1,26 @@
-<div class="carro">
-<div class="bn">
-    <div class="carousel">
-
-
-        <meta charset="UTF-8">
-
-
-
-        <div class="swiffy-slider">
-            <ul class="slider-container">
-                <li><img src="https://tiojoao.com.br/wp-content/uploads/2020/05/MassadePastel.jpg" style="max-width: 100%;height: auto;"></li>
-                <li><img src="https://atomicpapers.com.br/web/wallpapers/bolo-de-chocolate/1600x900.jpg" style="max-width: 100%;height: auto;"></li>
-                <li><img src="https://images.wallpaperscraft.com/image/single/bank_coca_cola_label_brand_17311_1600x900.jpg" style="max-width: 100%;height: auto;"></li>
-            </ul>
-            <button type="button" class="slider-nav"></button>
-            <button type="button" class="slider-nav slider-nav-next"></button>
-
-            <div class="slider-indicators">
-                <button class="active"></button>
-                <button></button>
-                <button></button>
-            </div>
+<div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-indicators">
+        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+    </div>
+    <div class="carousel-inner">
+        <div class="carousel-item active">
+            <img src="https://tiojoao.com.br/wp-content/uploads/2020/05/MassadePastel.jpg" class="img-fluid">
+        </div>
+        <div class="carousel-item">
+            <img src="https://atomicpapers.com.br/web/wallpapers/bolo-de-chocolate/1600x900.jpg" class="img-fluid">
+        </div>
+        <div class="carousel-item">
+            <img src="https://atomicpapers.com.br/web/wallpapers/bolo-de-chocolate/1600x900.jpg" class="img-fluid">
         </div>
     </div>
-</div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+    </button>
 </div>
