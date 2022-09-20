@@ -1,17 +1,17 @@
 <?php
-    include "../include/MySql.php";
+    include "include/MySql.php";
 
     $msgErro = "";
-    $codigo = "";
+
 
     if (isset($_GET['id'])){
         $codigo = $_GET['id'];
 
-        $sql = $pdo->prepare("DELETE FROM categoria WHERE codigo = ?");
+        $sql = $pdo->prepare("DELETE FROM categoria = ?");
         if ($sql->execute(array($codigo))){
             if ($sql->rowCount() > 0){
                 $msgErro = "produto excluído com sucesso!";
-                header('location:listProdutos.php');
+                header('location:listCategoria.php');
             } else {
                 $msgErro = "Código não localizado!";
             }
