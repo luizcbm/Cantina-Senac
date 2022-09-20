@@ -90,11 +90,12 @@ if ($_SERVER['REQUEST_METHOD'] == "POST" && isset($_POST['submit'])) {
 }
 
 ?>
-<div class="container">
+<div class="container fundo">
     <form method="POST" enctype="multipart/form-data">
         <div class="container-form">
             <div class="forma">
-         <legend>Cadastro</legend>
+            <img src="assets/images/chapéu.png" class="img-fluid" style="max-height: 200px;">
+                <legend>Cadastro</legend>
                 <br>
             </div>
             <div>
@@ -113,7 +114,7 @@ if ($_SERVER['REQUEST_METHOD'] == "POST" && isset($_POST['submit'])) {
                 <input type="password" placeholder="Senha" name="senha" value="<?php echo $senha ?>">
                 <span class="obrigatorio">*<?php echo $senhaErro ?></span>
             </div>
-         
+
 
             <div class="daora">
                 <label class="custom-file-upload">
@@ -121,16 +122,20 @@ if ($_SERVER['REQUEST_METHOD'] == "POST" && isset($_POST['submit'])) {
                     Escolher arquivo
                 </label>
             </div>
-            
+
             <div class="bot">
                 <a href="login.php"><button type="submit" name="submit">Salvar</button></a>
 
             </div>
+
+
+
         </div>
-    
-    
-    </div>
 
     </form>
     <span><?php echo $msgErro ?></span>
 </div>
+
+<?php
+include "footer.php";
+?>

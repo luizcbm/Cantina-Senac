@@ -1,0 +1,9 @@
+.container.fundo {
+    background-color: rgba(35, 35, 35, 0.906);
+}
+
+@media (min-width:768px) {
+    .container.fundo {
+        padding: 40px;
+    }
+}
