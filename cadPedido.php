@@ -60,11 +60,17 @@ if ($_SERVER['REQUEST_METHOD'] == "POST" && isset($_POST['submit'])) {
 
             <br>
         </div>
-
-
         <input type="text" placeholder="descricao" name="descricao" value="<?php echo $descricao ?>">
         <span class="obrigatorio">*<?php echo $descricaoErro ?></span>
         <br>
+        <input type="text" placeholder="descricao" name="descricao" value="<?php echo $descricao ?>">
+        <span class="obrigatorio">*<?php echo $descricaoErro ?></span>
+        <br>
+        <input type="text" placeholder="descricao" name="descricao" value="<?php echo $descricao ?>">
+        <span class="obrigatorio">*<?php echo $descricaoErro ?></span>
+        <br>
+        <input type="text" placeholder="descricao" name="descricao" value="<?php echo $descricao ?>">
+        <span class="obrigatorio">*<?php echo $descricaoErro ?></span>
         <br>
         <div class="button">
             <a href="listCategoria.php"><button type="submit" name="submit">Salvar</button></a>
