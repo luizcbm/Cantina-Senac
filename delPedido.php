@@ -7,8 +7,8 @@ $codCategoria ="";
     if (isset($_GET['id'])){
         $codCategoria = $_GET['id'];
 
-        $sql = $pdo->prepare("DELETE FROM categoria WHERE codCategoria = ?");
-        if ($sql->execute(array($codCategoria))){
+        $sql = $pdo->prepare("DELETE FROM pedido WHERE codPedido = ?");
+        if ($sql->execute(array($codPedido))){
             if ($sql->rowCount() > 0){
                 $msgErro = "produto excluído com sucesso!";
                 header('location:listCategoria.php');

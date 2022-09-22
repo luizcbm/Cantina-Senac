@@ -2,39 +2,64 @@
 include "include/MySql.php";
 
 
-$codCategoria = "";
-$descricao = "";
-$codCategoria ="";
+$codPedido = "";
+$idCliente = "";
+$horario_abre = "";
+$horario_fecha = "";
 
-$codCategoriaErro = "";
-$descricaoErro = "";
+$codPedidoErro = "";
+$idClienteErro = "";
+$horario_abreErro = "";
+$horario_fechaErro = "";
 $msgErro = "";
 
 if (isset($_GET['id'])) {
     $codCategoria = $_GET['id'];
-    $sql = $pdo->prepare("SELECT * FROM categoria  WHERE codCategoria = ?");
-    if ($sql->execute(array($codCategoria))) {
+    $sql = $pdo->prepare("UPDATE pedido  SET codPedido = ?, idCliente = ?, horario_abre= ?,horario_fecha=?");
+
+    if ($sql->execute(array($codPedido, $idCliente, $horario_abre, $horario_fecha,))) {
         $info = $sql->fetchAll(PDO::FETCH_ASSOC);
         foreach ($info as $key => $value) {
-            $codCategoria = $value['codCategoria'];
-            $descricao = $value['descricao'];
+            $codPedido = $value['codPedido'];
+            $idCliente = $value['idCliente'];
+            $horario_abre = $value['horario_abre'];
+            $horario_fecha = $value['horario_fecha'];
         }
     }
 }
 
 
 if ($_SERVER['REQUEST_METHOD'] == "POST" && isset($_POST['submit'])) {
-      
 
-    if (empty($_POST['descricao']))
-        $descricaoErro = "descricao é obrigatório!";
+
+    if (empty($_POST['codPedido']))
+        $codPedidoErro = "codPedido é obrigatório!";
     else
-        $descricao = $_POST['descricao'];
+        $codPedido = $_POST['codPedido'];
 
-    if ($codCategoria && $descricao) {
-        $sql = $pdo->prepare("UPDATE categoria SET codCategoria=?, descricao=? WHERE codCategoria=?");
+
+    if (empty($_POST['idCliente']))
+        $idClienteErro = "idCliente é obrigatório!";
+    else
+        $idCliente = $_POST['idCliente'];
+
+
+    if (empty($_POST['horario_abre']))
+        $horario_abreErro = "horario_abre é obrigatório!";
+    else
+        $horario_abre = $_POST['horario_abre'];
+
+
+    if (empty($_POST['horario_fecha']))
+        $horario_fechaErro = "horario_fecha é obrigatório!";
+    else
+        $horario_fecha = $_POST['horario_fecha'];
+
+
+    if ($codpedido && $idCliente && $horario_abre && $horario_fecha) {
+        $sql = $pdo->prepare("UPDATE pedido SET codCategoria=?, descricao=? WHERE codCategoria=?");
         echo $descricao;
-        if ($sql->execute(array($codCategoria, $descricao,$codCategoria))) {
+        if ($sql->execute(array($codCategoria, $descricao, $codCategoria))) {
             $msgErro = "Dados alterados com sucesso!";
             header('location:listcategoria.php');
         } else {
@@ -43,23 +68,28 @@ if ($_SERVER['REQUEST_METHOD'] == "POST" && isset($_POST['submit'])) {
     } else {
         $msgErro = "Dados não alteardos!";
     }
-
 }
 echo  $msgErro;
 ?>
 
 
-    <form method="POST" enctype="multipart/form-data">
-        <fieldset>
-            <legend>Alterar categoria</legend>
+<form method="POST" enctype="multipart/form-data">
+    <fieldset>
+        <legend>Alterar categoria</legend>
 
-            categoria: <input type="text" name="codCategoria" value="<?php echo $codCategoria?>">
-            <span class="obrigatorio">*<?php echo $codCategoriaErro ?></span>
-            <br>
-            descricao: <input type="text" name="descricao" value="<?php echo $descricao ?>">
-            <span class="obrigatorio">*<?php echo $descricaoErro ?></span>
-            <br>
-            <input type="submit" value="Alterar" name="submit">
-        </fieldset>
-    </form>
-    <span><?php echo $msgErro ?></span>
+        cadPedido: <input type="text" name="codCatPedido" value="<?php echo $codPedido ?>">
+        <span class="obrigatorio">*<?php echo $codPedidoErro ?></span>
+        <br>
+        idCliente: <input type="text" name="idCliente" value="<?php echo  $idCliente ?>">
+        <span class="obrigatorio">*<?php echo $idClienteErro ?></span>
+        <br>
+        horario_abre: <input type="text" name="horario_abre" value="<?php echo  $horario_abre ?>">
+        <span class="obrigatorio">*<?php echo $horario_abreErro ?></span>
+        <br>
+        horario_fecha: <input type="text" name="horario_fecha" value="<?php echo $horario_fecha ?>">
+        <span class="obrigatorio">*<?php echo $horario_fechaErro ?></span>
+        <br>
+        <input type="submit" value="Alterar" name="submit">
+    </fieldset>
+</form>
+<span><?php echo $msgErro ?></span>
