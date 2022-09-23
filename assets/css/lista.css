@@ -1,8 +1,136 @@
-body {
-    background: url('https://img.lovepik.com/freevector/32/40/81/75b58PICnJypdb4E013fA_PIC2018.jpg') center center no-repeat fixed;
+.list {
+    text-align: center;
     background-color: black;
+    padding: 78px;
+    border-radius: 15px;
+    margin: 0 auto;
+    width: 1100px;
+    margin-top: 95px;
+    color: aliceblue;
+    border: 5px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 12.2px;
 }
 
-h1 {
+input[type=button] {
+    background-color: dodgerblue;
+    border: none;
+    padding: 8px;
+    width: 10%;
+    border-radius: 15px;
+    cursor: pointer;
     color: aliceblue;
+}
+
+table {
+    border-collapse: collapse;
+    width: 35em;
+    border: 1px solid #666;
+    background-color: #000000;
+    color: rgb(255, 255, 255);
+}
+
+thead {
+    background: #ccc url(https://www.devfuria.com.br/html-css/tabelas/bar.gif) repeat-x left center;
+    border-top: 1px solid #a5a5a5;
+    border-bottom: 1px solid #a5a5a5;
+}
+
+tr:hover {
+    background-color: #3d80df;
+    color: #fff;
+}
+
+thead tr:hover {
+    background-color: transparent;
+    color: inherit;
+}
+
+tr:nth-child(even) {
+    background-color: #edf5ff;
+}
+
+th {
+    font-weight: normal;
+    text-align: left;
+}
+
+th,
+td {
+    padding: 0.1em 1em;
+}
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+    border: 1px solid #666;
+}
+
+thead {
+    background: #ccc url(https://www.devfuria.com.br/html-css/tabelas/bar.gif) repeat-x left center;
+    border-top: 1px solid #a5a5a5;
+    border-bottom: 1px solid #a5a5a5;
+}
+
+table tr:hover {
+    background-color: #3d80df;
+    color: #fff;
+}
+
+thead tr:hover {
+    background-color: transparent;
+    color: inherit;
+}
+
+tr:nth-child(even) {
+    background-color: #000000;
+}
+
+th {
+    font-weight: normal;
+    text-align: left;
+}
+
+th,
+td {
+    padding: 0.1em 1em;
+}
+
+.box {
+    box-sizing: border-box;
+    padding: 1rem;
+    width: 50%;
+}
+
+.box.w100 {
+    width: 100%;
+}
+
+@media only screen and (max-width: 600px) {
+    .divTab {
+        float: none;
+        width: 100%;
+    }
+    table {
+        width: 100%;
+    }
+}
+
+table {
+    margin: 5px !important;
+    width: 95%;
+    margin: 5px !important;
+    border: 1px solid #666;
 }
