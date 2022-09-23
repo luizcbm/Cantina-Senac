@@ -94,7 +94,7 @@ if ($_SERVER['REQUEST_METHOD'] == "POST" && isset($_POST['submit'])) {
     <form method="POST" enctype="multipart/form-data">
         <div class="container-form">
             <div class="forma">
-            <img src="assets/images/chapéu.png" class="img-fluid" style="max-height: 200px;">
+                <img src="assets/images/chapéu.png" class="img-fluid" style="max-height: 200px;">
                 <legend>Cadastro</legend>
                 <br>
             </div>
@@ -121,14 +121,14 @@ if ($_SERVER['REQUEST_METHOD'] == "POST" && isset($_POST['submit'])) {
                     <input type="file" name="image">
                     Escolher arquivo
                 </label>
+
+
+                <div class="bot">
+                    <a href="login.php"><button type="submit" name="submit">Salvar</button></a>
+
+                </div>
+
             </div>
-
-            <div class="bot">
-                <a href="login.php"><button type="submit" name="submit">Salvar</button></a>
-
-            </div>
-
-
 
         </div>
 

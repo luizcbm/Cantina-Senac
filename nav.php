@@ -22,14 +22,7 @@ if (!isset($_SESSION['nome'])) {
   $link =  '<a href="logout.php" title="Logout" class="dropdown-item">Sair</a>';
 }
 
-$link_adm = "";
-if (isset($_SESSION['codigo=1'])) {
-  $link_adm =  '<li><a class="dropdown-item" href="altUsuario.php" >Alterar</a></li>';
-  $link_adm .= '<li><a class="dropdown-item" href="listUsuario.php">Usuarios</a></li>';
-} else {
-  $link_adm =  '<li><a class="dropdown-item"href="altUsuario.php">Alterar</a></li>';
-  // $link_adm .=  '<a href="listUsuario.php">Usuarios</a>';
-}
+
 
 
 
@@ -55,9 +48,9 @@ if (isset($_SESSION['nome'])) {
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle px-3 text-muted text-light" href="#" id="navbarDarkDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false"> Cardápio</a>
           <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="navbarDarkDropdownMenuLink">
-            <li><a class="dropdown-item text-muted text-light"  href="#">Bebidas</a></li>
-            <li><a class="dropdown-item text-muted text-light" href="#">Bebidas 2</a></li>
-            <li><a class="dropdown-item text-muted text-light" href="#">Bebidas 3</a></li>
+            <li><a class="dropdown-item text-muted text-light"  href="bebidas.php">Bebidas</a></li>
+            <li><a class="dropdown-item text-muted text-light" href="#">Salgados</a></li>
+            <li><a class="dropdown-item text-muted text-light" href="#">Doces</a></li>
           </ul>
         </li>
       </ul>
@@ -71,14 +64,20 @@ if (isset($_SESSION['nome'])) {
           <?php if (isset($_SESSION['codigo'])) : ?>
             <img class="rounded-circle" style="" alt="mdo" width="32" height="32" src="<?php echo $path; ?>">
           <?php else : ?>
-            <img class="rounded-circle" style="" alt="mdo" width="32" height="32" src="assets/images/visitante.png">
+            <img class="rounded-circle"  alt="mdo" width="32" height="32" src="assets/images/visitante.png">
           <?php endif; ?>
           <!-- <img src="https://github.com/mdo.png" alt="mdo" width="32" height="32" class="rounded-circle"> -->
         </a>
         <ul class="dropdown-menu text-small" aria-labelledby="dropdownUser1">
-          <li><a class="dropdown-item" href="paginas/altUsuario.php">Editar perfil</a></li>
-          <li><a class="dropdown-item" href="paginas/listUsuario.php">Usuários</a></li>
-          <?php echo $link_adm; ?>
+       <?php
+        if (isset($_SESSION['administrador'])==1) {
+ echo  '<li><a class="dropdown-item" href="altUsuario.php" >Editar perfil</a></li>
+    <li><a class="dropdown-item" href="listUsuario.php">Usuarios</a></li>';
+} else {
+ echo  '<li><a class="dropdown-item"href="altUsuario.php">Editar perfil</a></li>';
+}
+?>
+          
           <li>
             <hr class="dropdown-divider">
           </li>
