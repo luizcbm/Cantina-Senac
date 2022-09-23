@@ -17,8 +17,10 @@
         echo "</tr>";
         foreach($info as $key => $value){
             echo "<tr>";
-            echo "<td>".$value['codCategoria']."</td>";
-            echo "<td>".$value['descricao']."</td>";
+            echo "<td>".$value['codPedido']."</td>";
+            echo "<td>".$value['idCliente']."</td>";
+            echo "<td>".$value['horario_abre']."</td>";
+            echo "<td>".$value['horario_fecha']."</td>";
 
             echo "<td><center><a href='altPedido.php?id=".$value['codPedido']."'>(+)</a></center></td>";
             echo "<td><center><a href='delPedido.php?id=".$value['codPedido']."'>(-)</a></center></td>";
