@@ -2,22 +2,21 @@
 include "include/MySql.php";
 
 
-$categoria = "";
+$codCategoria = "";
 $descricao = "";
+$codCategoria ="";
 
-
-$categoriaErro = "";
+$codCategoriaErro = "";
 $descricaoErro = "";
 $msgErro = "";
 
 if (isset($_GET['id'])) {
-    $codigo = $_GET['id'];
-    $sql = $pdo->prepare("SELECT * FROM categoria WHERE codigo = ?");
-    if ($sql->execute(array($codigo))) {
+    $codCategoria = $_GET['id'];
+    $sql = $pdo->prepare("SELECT * FROM categoria  WHERE codCategoria = ?");
+    if ($sql->execute(array($codCategoria))) {
         $info = $sql->fetchAll(PDO::FETCH_ASSOC);
         foreach ($info as $key => $value) {
-            $codigo = $value['codigo'];
-            $categoria = $value['nome'];
+            $codCategoria = $value['codCategoria'];
             $descricao = $value['descricao'];
         }
     }
@@ -26,25 +25,18 @@ if (isset($_GET['id'])) {
 
 if ($_SERVER['REQUEST_METHOD'] == "POST" && isset($_POST['submit'])) {
       
-           
-           
-    if (empty($_POST['categoria']))
-        $categoriaErro = "categoria é obrigatório!";
-    else
-        $categoria= $_POST['categoria'];
 
     if (empty($_POST['descricao']))
         $descricaoErro = "descricao é obrigatório!";
     else
         $descricao = $_POST['descricao'];
 
-    if ($categoria && $descricao) {
-        $sql = $pdo->prepare("UPDATE categoria SET categoria=?, 
-                                                descricao=?");
-
-        if ($sql->execute(array( $categoria, $descricao,))) {
+    if ($codCategoria && $descricao) {
+        $sql = $pdo->prepare("UPDATE categoria SET codCategoria=?, descricao=? WHERE codCategoria=?");
+        echo $descricao;
+        if ($sql->execute(array($codCategoria, $descricao,$codCategoria))) {
             $msgErro = "Dados alterados com sucesso!";
-            header('location:listProdutos.php');
+            header('location:listcategoria.php');
         } else {
             $msgErro = "Dados não cadastrados!";
         }
@@ -61,8 +53,8 @@ echo  $msgErro;
         <fieldset>
             <legend>Alterar categoria</legend>
 
-            categoria: <input type="text" name="categoria" value="<?php echo $categoria?>">
-            <span class="obrigatorio">*<?php echo $categoriaErro ?></span>
+            categoria: <input type="text" name="codCategoria" value="<?php echo $codCategoria?>">
+            <span class="obrigatorio">*<?php echo $codCategoriaErro ?></span>
             <br>
             descricao: <input type="text" name="descricao" value="<?php echo $descricao ?>">
             <span class="obrigatorio">*<?php echo $descricaoErro ?></span>

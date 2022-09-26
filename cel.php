@@ -3,16 +3,20 @@
         <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
         <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
         <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3" aria-label="Slide 4"></button>
     </div>
     <div class="carousel-inner">
         <div class="carousel-item active">
-            <img src="https://tiojoao.com.br/wp-content/uploads/2020/05/MassadePastel.jpg" class="img-fluid">
+            <img src="./assets/images/promoção.png" class="img-fluid">
         </div>
         <div class="carousel-item">
-            <img src="https://atomicpapers.com.br/web/wallpapers/bolo-de-chocolate/1600x900.jpg" class="img-fluid">
+            <img src="./assets/images/Pastel.png" class="img-fluid">
         </div>
         <div class="carousel-item">
-            <img src="https://atomicpapers.com.br/web/wallpapers/bolo-de-chocolate/1600x900.jpg" class="img-fluid">
+            <img src="./assets/images/bolo.png" class="img-fluid">
+        </div>
+        <div class="carousel-item">
+           <a href="sobre.php"><img src="./assets/images/coquinha.png" class="img-fluid"></a> 
         </div>
     </div>
     <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">

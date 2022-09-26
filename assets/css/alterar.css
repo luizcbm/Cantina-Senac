@@ -4,16 +4,20 @@
 }
 
 .bolo {
+    text-align: center;
     background-color: black;
-    padding: 80px;
+    padding: 58px;
     border-radius: 15px;
     margin: 0 auto;
     width: 30%;
+    margin-top: 95px;
 }
 
 legend {
-    color: blue;
+    color: white;
+    font-size: 50px;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    left: auto;
 }
 
 input {
@@ -31,10 +35,11 @@ input {
 input[type=submit] {
     background-color: dodgerblue;
     border: none;
-    padding: 15px;
+    padding: 8px;
     width: 50%;
     border-radius: 15px;
     cursor: pointer;
+    color: aliceblue;
 }
 
 .enzo h3 a {
