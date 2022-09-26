@@ -57,7 +57,7 @@ if (isset($_SESSION['nome'])) {
           <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="navbarDarkDropdownMenuLink">
             <li><a class="dropdown-item text-muted text-light"  href="#">Bebidas</a></li>
             <li><a class="dropdown-item text-muted text-light" href="#">Bebidas 2</a></li>
-            <li><a class="dropdown-item text-muted text-light" href="#">Bebidas 3</a></li>
+            <li><a class="dropdown-item text-muted text-light" href="doces.php">Doces</a></li>
           </ul>
         </li>
       </ul>
@@ -71,7 +71,7 @@ if (isset($_SESSION['nome'])) {
           <?php if (isset($_SESSION['codigo'])) : ?>
             <img class="rounded-circle" style="" alt="mdo" width="32" height="32" src="<?php echo $path; ?>">
           <?php else : ?>
-            <img class="rounded-circle" style="" alt="mdo" width="32" height="32" src="assets/images/visitante.png">
+            <img class="rounded-circle" alt="mdo" width="32" height="32" src="assets/images/visitante.png">
           <?php endif; ?>
           <!-- <img src="https://github.com/mdo.png" alt="mdo" width="32" height="32" class="rounded-circle"> -->
         </a>
