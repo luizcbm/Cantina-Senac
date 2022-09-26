@@ -56,8 +56,8 @@ if (isset($_SESSION['nome'])) {
           <a class="nav-link dropdown-toggle px-3 text-muted text-light" href="#" id="navbarDarkDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false"> Cardápio</a>
           <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="navbarDarkDropdownMenuLink">
             <li><a class="dropdown-item text-muted text-light"  href="#">Bebidas</a></li>
-            <li><a class="dropdown-item text-muted text-light" href="#">Bebidas 2</a></li>
-            <li><a class="dropdown-item text-muted text-light" href="#">Bebidas 3</a></li>
+            <li><a class="dropdown-item text-muted text-light" href="salgados/salgados.php">Salgados</a></li>
+            <li><a class="dropdown-item text-muted text-light" href="#">Doces</a></li>
           </ul>
         </li>
       </ul>

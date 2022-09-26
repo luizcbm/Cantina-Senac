@@ -1,10 +1,11 @@
 <?php 
+if(!defined('HOST')){
     define('HOST', 'localhost');
     define('DB', 'cantinasenac');
     define('USER', 'root');
     define('PASS','');
     define('PORT', '3306');
-
+}
     try{
         $pdo = new PDO('mysql:host='.HOST.';port='.PORT.';dbname='.DB, 
                        USER,
