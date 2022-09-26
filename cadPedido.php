@@ -2,7 +2,7 @@
 include "include/MySql.php";
 
 
-
+$codProduto = "";
 $idCliente = "";
 $horario_abre ="";
 $horario_fecha ="";
@@ -12,14 +12,14 @@ $idClienteErro = "";
 $horario_abreErro ="";
 $horario_fechaErro ="";
 $msgErro = "";
-var_dump($_POST);
+
 
 if ($_SERVER['REQUEST_METHOD'] == "POST" && isset($_POST['submit'])) {
 
-if (empty($_POST['idCliente']))
-    $idClienteErro = "idCliente é obrigatório!";
+if (empty($_POST['clientes']))
+    $idClienteErro = "cliente é obrigatório!";
 else
-    $idCliente = $_POST['idCliente'];
+    $idCliente = $_POST['clientes'];
 
 if (empty($_POST['horario_abre']))
     $horario_abreErro  = "horario_abre  é obrigatório!";
@@ -31,7 +31,12 @@ else
 else
     $horario_fecha= $_POST['horario_fecha'];
 
-if ($idCliente && $horario_abre && $horario_fecha) {
+if (empty($_POST['produtos']))
+    $horario_fechaErro  = "produto  é obrigatório!";
+else    
+    $codProduto= $_POST['produtos'];
+
+if ($idCliente && $horario_abre && $horario_fecha && $codProduto) {
     //Verificar se ja existe o email
             $sql = $pdo->prepare("INSERT INTO pedido(idCliente, horario_abre, horario_fecha)
                                     VALUES ( ?, ?, ?)");
@@ -40,6 +45,16 @@ if ($idCliente && $horario_abre && $horario_fecha) {
                 $idCliente = "";
                 $horario_abre = "";
                 $horario_fecha = "";
+                $codPedido = $pdo->lastInsertId();
+                $sql = $pdo->prepare("INSERT INTO itenspedido( codProduto, codPedido)
+                                    VALUES ( ?, ?)");
+                if ($sql->execute(array($codProduto, $codPedido))) {
+                    $msgErro = "Dados cadastrados com sucesso!";
+                    $codProduto = "";
+                    $codPedido = "";
+                } else {
+                    $msgErro = "Dados não cadastrados!";
+                }
                 header('location:listPedido.php');
             } else {
                 $msgErro = "Dados não cadastrados!";
@@ -58,8 +73,32 @@ if ($idCliente && $horario_abre && $horario_fecha) {
 
             <br>
         </div>
-        <input type="text" placeholder="idCliente" name="idCliente" value="<?php echo $idCliente ?>">
+        <select name="clientes" id="clientes">
+            <option value="0">selecione o cliente</option>
+            <?php
+            $sql1 = $pdo->prepare('SELECT * FROM usuario ');
+            if ($sql1->execute()) {
+                $info = $sql1->fetchAll(PDO::FETCH_ASSOC);
+                foreach ($info as $key => $value) {
+                    echo '<option value=' . $value['codigo'] . '>' . $value['nome'] . '</option>';
+                }
+            }
+            ?>
+        </select>
         <span class="obrigatorio">*<?php echo $idClienteErro ?></span>
+        <br>
+        <select name="produtos" id="produtos">
+            <option value="0">selecione o produto</option>
+            <?php
+            $sql1 = $pdo->prepare('SELECT * FROM produtos ');
+            if ($sql1->execute()) {
+                $info = $sql1->fetchAll(PDO::FETCH_ASSOC);
+                foreach ($info as $key => $value) {
+                    echo '<option value=' . $value['codigo'] . '>' . $value['nome'] . '</option>';
+                }
+            }
+            ?>
+        </select>
         <br>
         <input type="time" placeholder="horario_abre" name="horario_abre" value="<?php echo $horario_abre ?>">
         <span class="obrigatorio">*<?php echo $horario_abreErro ?></span>
