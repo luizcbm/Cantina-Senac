@@ -48,15 +48,9 @@ if (isset($_SESSION['nome'])) {
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle px-3 text-muted text-light" href="#" id="navbarDarkDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false"> Cardápio</a>
           <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="navbarDarkDropdownMenuLink">
-<<<<<<< HEAD
             <li><a class="dropdown-item text-muted text-light"  href="#">Bebidas</a></li>
             <li><a class="dropdown-item text-muted text-light" href="#">Bebidas 2</a></li>
             <li><a class="dropdown-item text-muted text-light" href="doces.php">Doces</a></li>
-=======
-            <li><a class="dropdown-item text-muted text-light"  href="bebidas.php">Bebidas</a></li>
-            <li><a class="dropdown-item text-muted text-light" href="#">Salgados</a></li>
-            <li><a class="dropdown-item text-muted text-light" href="#">Doces</a></li>
->>>>>>> 248c401d7ec9ca7db8898205be88a5a16fba5e71
           </ul>
         </li>
       </ul>
@@ -70,11 +64,7 @@ if (isset($_SESSION['nome'])) {
           <?php if (isset($_SESSION['codigo'])) : ?>
             <img class="rounded-circle" style="" alt="mdo" width="32" height="32" src="<?php echo $path; ?>">
           <?php else : ?>
-<<<<<<< HEAD
             <img class="rounded-circle" alt="mdo" width="32" height="32" src="assets/images/visitante.png">
-=======
-            <img class="rounded-circle"  alt="mdo" width="32" height="32" src="assets/images/visitante.png">
->>>>>>> 248c401d7ec9ca7db8898205be88a5a16fba5e71
           <?php endif; ?>
           <!-- <img src="https://github.com/mdo.png" alt="mdo" width="32" height="32" class="rounded-circle"> -->
         </a>
