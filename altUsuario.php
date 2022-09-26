@@ -8,7 +8,7 @@ $email = "";
 $telefone = "";
 $senha = "";
 $imgContent = "";
-$administrador = "";
+$administrador = 1;
 
 $nomeErro = "";
 $emailErro = "";
@@ -80,9 +80,10 @@ if ($_SERVER['REQUEST_METHOD'] == "POST" && isset($_POST['submit'])) {
                                                                 email=?, 
                                                                 telefone=?, 
                                                                 senha=?,
-                                                                imagem=?
+                                                                imagem=?,
+                                                                administrador=?
                                                         WHERE codigo=?"); 
-                if ($sql->execute(array($codigo, $nome, $email, $telefone, md5($senha), $imgContent, $codigo))) {
+                if ($sql->execute(array($codigo, $nome, $email, $telefone, md5($senha), $imgContent, $administrador, $codigo))) {
                     $msgErro = "Dados alterados com sucesso!";
                     header('location:listUsuario.php');
                 } else {
@@ -104,20 +105,21 @@ include_once "head.php";
 
 <div class="container">
     <div class="bolo">
+        <img src="./assets/images/chapéu.png">
         <form method="POST" enctype="multipart/form-data">
             <fieldset class="alt">
                 <legend>Alterar</legend>
 
-                Nome: <input type="text" name="nome" value="<?php echo $nome ?>">
+                <input type="text" name="nome" value="<?php echo $nome ?>">
                 <span class="obrigatorio">*<?php echo $nomeErro ?></span>
                 <br>
-                Email: <input type="text" name="email" value="<?php echo $email ?>">
+                <input type="text" name="email" value="<?php echo $email ?>">
                 <span class="obrigatorio">*<?php echo $emailErro ?></span>
                 <br>
-                Telefone: <input type="text" name="telefone" value="<?php echo $telefone ?>">
+                <input type="text" name="telefone" value="<?php echo $telefone ?>">
                 <span class="obrigatorio">*<?php echo $telefoneErro ?></span>
                 <br>
-                Senha: <input type="password" name="senha" value="<?php echo $senha ?>">
+                <input type="password" placeholder="Senha" value="<?php echo $senha ?>">
                 <span class="obrigatorio">*<?php echo $senhaErro ?></span>
                 <br>
                 <input type="checkbox" name="administrador"> administrador
@@ -131,3 +133,7 @@ include_once "head.php";
         <span><?php echo $msgErro ?></span>
     </div>
 </div>
+
+<?
+include "footer.php";
+?>
