@@ -1,6 +1,6 @@
 <?php
-//include "head.php";
-include "include/MySql.php";
+include "head.php";
+include_once "MySql.php";
 
 
 
@@ -25,7 +25,7 @@ if ($sql->execute()) {
 
 }
 ?>
-<link rel="stylesheet" href="assets/css/refri.css">
+
 <?php
 include "footer.php"
 ?>
