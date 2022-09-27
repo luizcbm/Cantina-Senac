@@ -20,9 +20,10 @@ session_start();
     <link rel="stylesheet" href="./assets/css/alterar.css">
     <!-- <link rel="stylesheet" href="./assets/css/footer.css"> -->
     <!-- <link rel="stylesheet" href="./assets/css/carrousel.css"> -->
-    <link rel="stylesheet" href="./assets/css/login.css">
+    <link rel="stylesheet" href="assets/css/refri.css">
     <link rel="stylesheet" href="./assets/css/novo.css">
     <!-- <script src="https://cdn.jsdelivr.net/npm/swiffy-slider@1.5.3/dist/js/swiffy-slider.min.js" crossorigin="anonymous" defer></script> -->
+    <link rel="stylesheet" href="./assets/css/login.css">
     <script src="assets/js/index.js"></script>
     <title>Cantina Senac</title>
 

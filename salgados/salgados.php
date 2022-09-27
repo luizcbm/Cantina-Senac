@@ -4,7 +4,7 @@ include "../MySql.php";
 
 
 
-$sql = $pdo->prepare('SELECT * FROM produtos ');
+$sql = $pdo->prepare('SELECT * FROM salgados ');
 if(isset($_SESSION['administrador=1'])){
 echo "<a href=cadCategoria.php><button type=submit name=submit>Cadastrar</button></a>";
 }else{
