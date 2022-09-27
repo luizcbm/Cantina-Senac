@@ -1,5 +1,6 @@
 <?php
-    include "../include/MySql.php";
+    include "head.php";
+    include "MySql.php";
 
     $sql = $pdo->prepare('SELECT * FROM Produtos');
     if ($sql->execute()){
@@ -34,6 +35,12 @@
 ?>
 
 <br>
-<input type="button" value="Cadastrar" onclick="parent.location='cadProdutos.php'">
+<input type="button" value="Cadastrar" onclick="parent.location='./cadProdutos.php'">
 
-<h3><a href="principal.php">Tela Principal</a></h3>
+<h3><a href="index.php">Tela Principal</a></h3>
+
+<link rel="stylesheet" href="assets/css/doces.css">
+
+<?php
+include "footer.php"
+?>

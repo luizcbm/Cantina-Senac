@@ -4,7 +4,7 @@ include_once "MySql.php";
 
 
 
-$sql = $pdo->prepare('SELECT * FROM produtos ');
+$sql = $pdo->prepare('SELECT * FROM doces ');
 if(isset($_SESSION['codigo'])==0){
     echo ""; 
 }else{
@@ -30,7 +30,7 @@ if ($sql->execute()) {
 
 }
 ?>
-<link rel="stylesheet" href="assets/css/doces.css">
+
 <?php
 include "footer.php"
 ?>

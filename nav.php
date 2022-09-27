@@ -49,11 +49,11 @@ if (isset($_SESSION['nome'])) {
           <a class="nav-link dropdown-toggle px-3 text-muted text-light" href="#" id="navbarDarkDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false"> Cardápio</a>
           <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="navbarDarkDropdownMenuLink">
             <li><a class="dropdown-item text-muted text-light"  href="#">Bebidas</a></li>
-            <li><a class="dropdown-item text-muted text-light" href="#">Bebidas 2</a></li>
+            <li><a class="dropdown-item text-muted text-light" href="salgados.php">Salgados</a></li>
             <li><a class="dropdown-item text-muted text-light" href="doces.php">Doces</a></li>
           </ul>
         </li>
-        <li><a href="carrinho.php" class="nav-link px-3 link-primary text-muted text-light"><img src="./assets/images/carrinho.png" style="  max-width: 40px;  align-items: center;"></a></li>
+       
       </ul>
 
       <form class="col-12 col-lg-auto mb-3 mb-lg-0 me-lg-3" action="busca.php">

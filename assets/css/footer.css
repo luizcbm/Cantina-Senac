@@ -22,6 +22,10 @@ img.rodape-imagem {
     width: 50px;
 }
 
+.destaque{
+    color: blue ;
+}
+
 .for {
     color: aliceblue;
     align-items: center;

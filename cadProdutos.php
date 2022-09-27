@@ -1,6 +1,6 @@
 <?php
 include "MySql.php";
-include "head.php";
+include_once "head.php";
 
 
 $nome_produto = "";
@@ -43,7 +43,7 @@ $msgErro = "";
 
                 if ($nome_produto && $descricao && $valor) {
                     //Verificar se ja existe o email
-                    $sql = $pdo->prepare("INSERT INTO produtos(codigo, nome, descricao, valor, IMAGEM)
+                    $sql = $pdo->prepare("INSERT INTO doces(codigo, nome, descricao, valor, IMAGEM)
                                                 VALUES (null, ?, ?, ?, ?)");
                     if ($sql->execute(array($nome_produto, $descricao, $valor, $imgContent))) {
                         $msgErro = "Dados cadastrados com sucesso!";
@@ -51,7 +51,9 @@ $msgErro = "";
                         $descricao = "";
                         $valor = "";
                         $imgContent = "";
-                        header('location:paginas/listProdutos.php');
+                      ?>
+                      <a href="listUsuario.php"></a>
+                      <?php
                     } else {
                         $msgErro = "Dados não cadastrados!";
                     }

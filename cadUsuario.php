@@ -133,7 +133,9 @@ if ($_SERVER['REQUEST_METHOD'] == "POST" && isset($_POST['submit'])) {
         </div>
 
     </form>
+    <div class="deu">
     <span><?php echo $msgErro ?></span>
+    </div>
 </div>
 
 <?php

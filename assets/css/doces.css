@@ -1,69 +1,109 @@
 body {
+
     color: black;
+
 }
+
+
 
 #cardapio {
+
     display: flex;
+
     flex-direction: row;
+
     justify-content: center;
+
     padding-top: -100px
+
 }
+
+
 
 .flex {
+
     display: flex;
+
     flex-wrap: wrap;
+
     text-align: center;
-    max-width: 100%;
+
 }
+
+
 
 #item {
+
     background-color: #F2B441;
-    margin: 3px;
+
+    margin: 30px;
+
     border-radius: 30px;
-    padding: 1px;
-    padding-left: 10px;
-    max-width: 30%;
- 
+
+    padding: 20px;
+
+    align-content: flex-end;
+
 }
 
-#imagem {
-    max-width: 100%;
+
+
+#imagens {
+
     padding: 5px;
+
+    width: 360px;
+
     height: 260px;
-    border-radius: 30px;
-    max-width: 100%;
+
+    border-radius: 30px
+
 }
 
-#item 
-    {
-        display: flex;
-        flex-direction: column;
-        text-align: center;
-        width: 300px;
-        margin: 100px;
-    }
+
+
+#item {
+
+    display: flex;
+
+    flex-direction: column;
+
+    text-align: center;
+
+}
+
 
 
 #item p {
-    font-size: 30px;
-    max-width: 100%;
+
+    font-size: 14px;
+
 }
-#item h1 {
-    font-size: 30px;
-    max-width: 3%;
-}
+
+
 
 #item button {
+
     background-color: #0AF25F;
+
     padding: 10px;
+
     border-radius: 10px;
+
     border: none;
+
     font-size: 14px;
+
     font-weight: bold;
+
     cursor: pointer;
-    max-width: 50%;
+
 }
 
+
+
 #item button:hover {
+
     background-color: aquamarine;
+
 }
