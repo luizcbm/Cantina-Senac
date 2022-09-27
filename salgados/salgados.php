@@ -1,6 +1,6 @@
 <?php
-include "../head.php";
-include "../MySql.php";
+include "head.php";
+include "MySql.php";
 
 
 
@@ -29,5 +29,5 @@ if ($sql->execute()) {
 ?>
 
 <?php
-include "../footer.php"
+include "footer.php"
 ?>
