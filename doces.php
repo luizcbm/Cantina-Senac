@@ -4,13 +4,18 @@ include_once "MySql.php";
 
 
 
-$sql = $pdo->prepare('SELECT * FROM item ');
+$sql = $pdo->prepare('SELECT * FROM produtos ');
+if(isset($_SESSION['codigo'])==0){
+    echo ""; 
+}else{
+    echo '<a href="cadProdutos.php"><button type="submit" name="submit">Cadastrar</button></a>';
+}
 
 if ($sql->execute()) {
     $info = $sql->fetchAll(PDO::FETCH_ASSOC);
     echo "<div id='cardapio' class='flex'>"; 
     foreach ($info as $key => $value) {
-        $imagem = $value["imagens"];
+        $imagem = $value["imagem"];
  
             echo "<div id='item'>";
                 echo "<h1>".$value["nome"]."</h1>";

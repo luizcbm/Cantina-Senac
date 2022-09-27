@@ -1,6 +1,6 @@
 <?php
 include_once "MySql.php";
-include "head.php";
+include_once "head.php";
 
 $nome = "";
 $email = "";

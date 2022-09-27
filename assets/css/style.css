@@ -91,3 +91,8 @@ nav a:focus {
 .footer {
     color: white;
 }
+
+.img-fluid {
+    border: none;
+    cursor: pointer;
+}
