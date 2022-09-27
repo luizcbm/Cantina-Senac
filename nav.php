@@ -38,11 +38,11 @@ if (isset($_SESSION['nome'])) {
   <div class="container">
     <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
       <a href="/" class="d-flex align-items-center ml-lg-5 mr-lg-5 mb-2 mb-lg-0 text-dark text-decoration-none">
-        <img src="assets/images/novalogo.png" class="img-fluid" style="max-height: 100px;">
-
-      </a>
-
-      <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0 text-light">
+       </a>
+       
+    
+     <a onClick="window.location.href=window.location.href"> <img src="assets/images/novalogo.png" class="img-fluid" style="max-height: 100px;"></a>
+       <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0 text-light">
         <li><a href="index.php" class="nav-link px-3 link-primary text-muted text-light">Inicio</a></li>
         <li><a href="sobre.php" class="nav-link px-3 link-primary text-muted text-light">Sobre</a></li>
         <li class="nav-item dropdown">
@@ -53,6 +53,7 @@ if (isset($_SESSION['nome'])) {
             <li><a class="dropdown-item text-muted text-light" href="#">Doces</a></li>
           </ul>
         </li>
+        <li><a href="carrinho.php" class="nav-link px-3 link-primary text-muted text-light"><img src="./assets/images/carrinho.png" style="  max-width: 40px;  align-items: center;"></a></li>
       </ul>
 
       <form class="col-12 col-lg-auto mb-3 mb-lg-0 me-lg-3" action="busca.php">

@@ -38,7 +38,7 @@ input {
 
 /*botão de logar*/
 
-button {
+.bot {
     background-color: dodgerblue;
     border: none;
     padding: 8px;

@@ -7,10 +7,10 @@ include "head.php";
 
 <?php
 
-include "paginas/logout.php"
+include "logout.php";
 
 ?>
 
 <?php
-include "footer.php"
+include "footer.php";
 ?>
