@@ -51,7 +51,7 @@ $msgErro = "";
                         $descricao = "";
                         $valor = "";
                         $imgContent = "";
-                        header('location:paginas/listProdutos.php');
+                        header('location:listProdutos.php');
                     } else {
                         $msgErro = "Dados não cadastrados!";
                     }
