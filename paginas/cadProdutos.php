@@ -1,6 +1,7 @@
 <?php
-include "MySql.php";
-include "head.php";
+include_once "head.php";
+include_once "paginas/inclde/MySql.php";
+
 
 
 $nome_produto = "";

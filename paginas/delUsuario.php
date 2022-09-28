@@ -1,5 +1,5 @@
 <?php
-    include "site/include/MySql.php";
+    include_once "include/MySql.php";
 
     $msgErro = "";
     $codigo = "";

@@ -2,15 +2,15 @@
 session_start();
 session_destroy();
 header('location:login.php');
-include "head.php";
+include_once "head.php";
 ?>
 
 <?php
 
-include "logout.php";
+include_once "logout.php";
 
 ?>
 
 <?php
-include "footer.php";
+include_once "footer.php";
 ?>

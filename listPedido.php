@@ -1,5 +1,5 @@
 <?php
-    include "include/MySql.php";
+    include_once "include/MySql.php";
     $sql = $pdo->prepare('SELECT * FROM pedido');
     if ($sql->execute()){
         $info = $sql->fetchAll(PDO::FETCH_ASSOC);

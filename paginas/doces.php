@@ -1,14 +1,14 @@
 <?php
-include "head.php";
-include_once "MySql.php";
+include_once "head.php";
+include_once "paginas/include/MySql.php";
 
 
 
-$sql = $pdo->prepare('SELECT * FROM produtos ');
+$sql = $pdo->prepare('SELECT * FROM doces');
 if(isset($_SESSION['codigo'])==0){
     echo ""; 
 }else{
-    echo '<a href="cadProdutos.php"><button type="submit" name="submit">Cadastrar</button></a>';
+    echo '<a href="paginas/cadProdutos.php"><button type="submit" name="submit">Cadastrar</button></a>';
 }
 
 if ($sql->execute()) {
@@ -30,6 +30,7 @@ if ($sql->execute()) {
 
 }
 ?>
+<h3><a href="index.php">Tela Principal</a></h3>
 <link rel="stylesheet" href="assets/css/doces.css">
 <?php
 include "footer.php"

@@ -1,5 +1,5 @@
 <?php
-include_once "MySql.php";
+include_once "include/MySql.php";
 
 
 $codigo = "";

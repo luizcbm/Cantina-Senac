@@ -1,6 +1,6 @@
 <?php
-include "site/include/MySql.php";
-include "site/include/functions.php";
+include_once "paginas/include/MySql.php";
+include_once "paginas/include/functions.php";
 
 $_SESSION['nome'] = "";
 $_SESSION['administrador'] = "";

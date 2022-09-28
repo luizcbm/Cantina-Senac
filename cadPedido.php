@@ -1,5 +1,5 @@
 <?php
-include "include/MySql.php";
+include_once "include/MySql.php";
 
 
 $codProduto = "";

@@ -1,5 +1,5 @@
 <?php
-include "MySql.php";
+include_once "paginas/include/MySql.php";
 include_once "head.php";
 ?>
 <div class="container fundo">
@@ -50,7 +50,7 @@ include_once "head.php";
         <br>
        <input type="button" value="Cadastrar" onclick="parent.location='cadUsuario.php'">
 
-        <h3><a href="principal.php">Tela Principal</a></h3>
+        <h3><a href="index.php">Tela Principal</a></h3>
 
     </div>
 </div>
