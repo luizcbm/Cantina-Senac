@@ -1,14 +1,14 @@
 <?php
-include "head.php";
-include "MySql.php";
+include_once "head.php";
+include_once "include/MySql.php";
 
 
 
-$sql = $pdo->prepare('SELECT * FROM salgados ');
+$sql = $pdo->prepare('SELECT * FROM salgados');
 if(isset($_SESSION['administrador=1'])){
 echo "<a href=cadCategoria.php><button type=submit name=submit>Cadastrar</button></a>";
 }else{
-    echo "";
+    echo '<a href="cadProdutos.php"><button type="submit" name="submit">Cadastrar</button></a>';
 }
 if ($sql->execute()) {
     $info = $sql->fetchAll(PDO::FETCH_ASSOC);
@@ -27,7 +27,8 @@ if ($sql->execute()) {
     echo "</div>";
 }
 ?>
+<h3><a href="index.php">Tela Principal</a></h3>
 
 <?php
-include "footer.php"
+include_once "footer.php"
 ?>

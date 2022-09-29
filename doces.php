@@ -1,10 +1,10 @@
 <?php
-include "head.php";
-include_once "MySql.php";
+include_once "head.php";
+include_once "include/MySql.php";
 
 
 
-$sql = $pdo->prepare('SELECT * FROM produtos ');
+$sql = $pdo->prepare('SELECT * FROM doces');
 if(isset($_SESSION['codigo'])==0){
     echo ""; 
 }else{
@@ -30,7 +30,8 @@ if ($sql->execute()) {
 
 }
 ?>
-<link rel="stylesheet" href="assets/css/doces.css">
+<h3><a href="index.php">Tela Principal</a></h3>
+<link rel="stylesheet" href="assets/css/refri.css">
 <?php
-include "footer.php"
+include_once "footer.php"
 ?>

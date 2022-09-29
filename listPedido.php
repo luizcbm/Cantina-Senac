@@ -1,5 +1,5 @@
 <?php
-    include "include/MySql.php";
+    include_once "include/MySql.php";
     $sql = $pdo->prepare('SELECT * FROM pedido');
     if ($sql->execute()){
         $info = $sql->fetchAll(PDO::FETCH_ASSOC);
@@ -40,4 +40,4 @@
 <br>
 <input type="button" value="Cadastrar" onclick="parent.location='cadPedido.php'">
 
-<h3><a href="principal.php">Tela Principal</a></h3>
+<h3><a href="index.php">Tela Principal</a></h3>

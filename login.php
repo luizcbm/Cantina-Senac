@@ -1,7 +1,7 @@
 <?php
-include_once "MySql.php";
-include_once "functions.php";
 include_once "head.php";
+include_once "include/MySql.php";
+include_once "include/functions.php";
 
 
 // $_SESSION['nome'] = "";

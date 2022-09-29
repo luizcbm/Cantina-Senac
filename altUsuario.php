@@ -1,5 +1,5 @@
 <?php
-include_once "MySql.php";
+include_once "include/MySql.php";
 
 
 $codigo = "";
@@ -135,5 +135,5 @@ include_once "head.php";
 </div>
 
 <?
-include "footer.php";
+include_once "footer.php";
 ?>

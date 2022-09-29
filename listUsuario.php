@@ -1,6 +1,7 @@
 <?php
-include "MySql.php";
 include_once "head.php";
+include_once "include/MySql.php";
+
 ?>
 <div class="container fundo">
     <div class="list">
@@ -10,7 +11,7 @@ include_once "head.php";
         if ($_SESSION['administrador'] == 1) {
             echo "Olá Administrador!!";
 
-            $sql = $pdo->prepare('SELECT * FROM usuario');
+            $sql = $pdo->prepare('SELECT * FROM USUARIO');
             if ($sql->execute()) {
                 $info = $sql->fetchAll(PDO::FETCH_ASSOC);
                 echo "<table border='7'>";
@@ -50,7 +51,7 @@ include_once "head.php";
         <br>
        <input type="button" value="Cadastrar" onclick="parent.location='cadUsuario.php'">
 
-        <h3><a href="principal.php">Tela Principal</a></h3>
+        <h3><a href="index.php">Tela Principal</a></h3>
 
     </div>
 </div>

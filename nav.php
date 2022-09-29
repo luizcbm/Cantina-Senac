@@ -1,9 +1,9 @@
 <?php
 include_once "head.php";
-include_once "MySql.php";
+include_once "include/MySql.php";
 // funções
 if (isset($_SESSION['codigo'])) {
-  $sql = $pdo->prepare('SELECT * FROM usuario WHERE codigo = ' . $_SESSION['codigo']);
+  $sql = $pdo->prepare('SELECT * FROM USUARIO WHERE codigo = ' . $_SESSION['codigo']);
   if ($sql->execute()) {
     $info = $sql->fetchAll(PDO::FETCH_ASSOC);
     $path = "data:image/jpg:charset=utf8;base64," . base64_encode($info[0]['imagem']);
@@ -48,12 +48,12 @@ if (isset($_SESSION['nome'])) {
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle px-3 text-muted text-light" href="#" id="navbarDarkDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false"> Cardápio</a>
           <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="navbarDarkDropdownMenuLink">
-            <li><a class="dropdown-item text-muted text-light"  href="#">Bebidas</a></li>
-            <li><a class="dropdown-item text-muted text-light" href="#">Bebidas 2</a></li>
+            <li><a class="dropdown-item text-muted text-light"  href="bebidas.php">Bebidas</a></li>
+            <li><a class="dropdown-item text-muted text-light" href="salgados.php">Salgados</a></li>
             <li><a class="dropdown-item text-muted text-light" href="doces.php">Doces</a></li>
           </ul>
         </li>
-        <li><a href="carrinho.php" class="nav-link px-3 link-primary text-muted text-light"><img src="./assets/images/carrinho.png" style="  max-width: 40px;  align-items: center;"></a></li>
+       
       </ul>
 
       <form class="col-12 col-lg-auto mb-3 mb-lg-0 me-lg-3" action="busca.php">

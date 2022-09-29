@@ -1,5 +1,5 @@
 <?php
-    include "include/MySql.php";
+    include_once "include/MySql.php";
 
     $sql = $pdo->prepare('SELECT * FROM categoria');
     if ($sql->execute()){
@@ -29,4 +29,4 @@
 <br>
 <input type="button" value="Cadastrar" onclick="parent.location='cadCategorias.php'">
 
-<h3><a href="principal.php">Tela Principal</a></h3>
+<h3><a href="index.php">Tela Principal</a></h3>
