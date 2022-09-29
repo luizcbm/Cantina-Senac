@@ -1,4 +1,5 @@
 <?php
+
     include_once "include/MySql.php";
    
 
@@ -20,7 +21,4 @@
             $msgErro = "Erro ao excluir usuário!";
         }
     }
-    //echo "Mensagem de erro: $msgErro";
-
-    include "head.php";
 ?>

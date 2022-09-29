@@ -1,6 +1,6 @@
 <?php
 include_once "head.php";
-include_once "paginas/inclde/MySql.php";
+include_once "include/MySql.php";
 
 
 

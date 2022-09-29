@@ -135,5 +135,5 @@ include_once "head.php";
 </div>
 
 <?
-include "footer.php";
+include_once "footer.php";
 ?>

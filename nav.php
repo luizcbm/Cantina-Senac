@@ -1,9 +1,9 @@
 <?php
 include_once "head.php";
-include "paginas/include/MySql.php";
+include_once "include/MySql.php";
 // funções
 if (isset($_SESSION['codigo'])) {
-  $sql = $pdo->prepare('SELECT * FROM usuario WHERE codigo = ' . $_SESSION['codigo']);
+  $sql = $pdo->prepare('SELECT * FROM USUARIO WHERE codigo = ' . $_SESSION['codigo']);
   if ($sql->execute()) {
     $info = $sql->fetchAll(PDO::FETCH_ASSOC);
     $path = "data:image/jpg:charset=utf8;base64," . base64_encode($info[0]['imagem']);
